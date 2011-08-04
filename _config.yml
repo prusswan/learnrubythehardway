@@ -1,0 +1,14 @@
+# Jekyll Configuration
+
+url: http://learncodethehardway.org/ruby/
+title: Learn Ruby The Hard Way
+description: Translation of Learn Python The Hard Way by Zed A. Shaw
+author: Rob Sobers #XXX
+email: rob@rsobers.com #XXX
+analytics_id: #Google Analytics ID : UA-xxx-xxx  
+
+auto: true 
+pygments: true 
+server_port: 4000
+markdown: rdiscount
+permalink: /:title.html
