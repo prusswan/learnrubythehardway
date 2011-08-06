@@ -32,15 +32,15 @@ Now you're going to make an initial very simple "Hello World" web application an
 You'll be taking the game from Exercise 42 and making it into a web application, so that's why you're calling it `gothonweb`. Before you do that, we need to create the most basic Sinatra application possible. Put the following code into `lib/gothonweb.rb`:
 
 {% highlight ruby linenos %}
-    require_relative "gothonweb/version"
-    require "sinatra"
-    
-    module Gothonweb
-      get '/' do
-        greeting = "Hello, World!"
-        return greeting
-      end
-    end
+require_relative "gothonweb/version"
+require "sinatra"
+
+module Gothonweb
+  get '/' do
+    greeting = "Hello, World!"
+    return greeting
+  end
+end
 {% endhighlight %}
 
 Then run the application like this:
@@ -87,20 +87,20 @@ You can break your Sinatra application, but did you notice that "Hello World" is
 The first step is to create a `lib/views/index.erb` file that looks like this:
 
 {% highlight erb linenos %}
-    <html>
-        <head>
-            <title>Gothons Of Planet Percal #25</title>
-        </head>
-    <body>
-    
-      <% if greeting %>
-        <p>I just wanted to say <em style="color: green; font-size: 2em;"><%= greeting %></em>.
-      <% else %>
-        <em>Hello</em>, world!
-      <% end %>
-    
-    </body>
-    </html>
+<html>
+    <head>
+        <title>Gothons Of Planet Percal #25</title>
+    </head>
+<body>
+
+  <% if greeting %>
+    <p>I just wanted to say <em style="color: green; font-size: 2em;"><%= greeting %></em>.
+  <% else %>
+    <em>Hello</em>, world!
+  <% end %>
+
+</body>
+</html>
 {% endhighlight %}
 
 What is a `.erb` file?  ERB stands for **E**mbedded **R**u**b**y. `.erb` files are HTML with bits of Ruby code embedded within.  If you know what HTML is then this should look fairly familiar. If not, research HTML and try writing a few web pages by hand so you know how it works.  Since this is an `erb` template, Sinatra will fill in "holes" in the text depending on variables you pass in to the template. Every place you see `<%= greeting %>` will be a variable you'll pass to the template that alters its contents.
@@ -108,16 +108,16 @@ What is a `.erb` file?  ERB stands for **E**mbedded **R**u**b**y. `.erb` files a
 To make your `lib/gothonweb.rb` script do this, you need to add some code to tell Sinatra where to load the template and to render it. Take that file and change it like this:
 
 {% highlight ruby linenos %}
-    require_relative "gothonweb/version"
-    require "sinatra"
-    require "erb"
-    
-    module Gothonweb
-      get '/' do
-        greeting = "Hello, World!"
-        erb :index, :locals => {:greeting => greeting}
-      end
-    end
+require_relative "gothonweb/version"
+require "sinatra"
+require "erb"
+
+module Gothonweb
+  get '/' do
+    greeting = "Hello, World!"
+    erb :index, :locals => {:greeting => greeting}
+  end
+end
 {% endhighlight %}
 
 Pay close attention to how I changed the last line of the `/` block so it calls `erb` passing in your greeting variable.

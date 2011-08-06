@@ -20,29 +20,29 @@ This exercise has lots of math symbols. Let's name them right away so you know w
 Notice how the operations are missing? After you type in the code for this exercise, go back and figure out what each of these does and complete the table. For example, `+` does addition.
 
 {% highlight ruby linenos %}
-    puts "I will now count my chickens:"
-    
-    puts "Hens", 25 + 30 / 6
-    puts "Roosters", 100 - 25 * 3 % 4
-    
-    puts "Now I will count the eggs:"
-    
-    puts 3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6
-    
-    puts "Is it true that 3 + 2 < 5 - 7?"
-    
-    puts 3 + 2 < 5 - 7
-    
-    puts "What is 3 + 2?", 3 + 2
-    puts "What is 5 - 7?", 5 - 7
-    
-    puts "Oh, that's why it's False."
-    
-    puts "How about some more."
-    
-    puts "Is it greater?", 5 > -2
-    puts "Is it greater or equal?", 5 >= -2
-    puts "Is it less or equal?", 5 <= -2
+puts "I will now count my chickens:"
+
+puts "Hens", 25 + 30 / 6
+puts "Roosters", 100 - 25 * 3 % 4
+
+puts "Now I will count the eggs:"
+
+puts 3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6
+
+puts "Is it true that 3 + 2 < 5 - 7?"
+
+puts 3 + 2 < 5 - 7
+
+puts "What is 3 + 2?", 3 + 2
+puts "What is 5 - 7?", 5 - 7
+
+puts "Oh, that's why it's False."
+
+puts "How about some more."
+
+puts "Is it greater?", 5 > -2
+puts "Is it greater or equal?", 5 >= -2
+puts "Is it less or equal?", 5 <= -2
 {% endhighlight %}
 
 ## What You Should See

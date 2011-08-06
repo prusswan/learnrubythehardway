@@ -48,22 +48,22 @@ That is the fastest crash course in how a web browser accesses information on se
 The best way to play with forms is to write some code that accepts form data, and then see what you can do. Take your `lib/gothonsweb.rb` file and make it look like this:
 
 {% highlight ruby linenos %}
-    require_relative "gothonweb/version"
-    require "sinatra"
-    require "erb"
-    
-    module Gothonweb
-      get '/' do
-        greeting = "Hello, World!"
-        erb :index, :locals => {:greeting => greeting}
-      end
-      
-      get '/hello' do
-        name = params[:name] || "Nobody"
-        greeting = "Hello, #{name}"
-        erb :index, :locals => {:greeting => greeting}
-      end
-    end
+require_relative "gothonweb/version"
+require "sinatra"
+require "erb"
+
+module Gothonweb
+  get '/' do
+    greeting = "Hello, World!"
+    erb :index, :locals => {:greeting => greeting}
+  end
+  
+  get '/hello' do
+    name = params[:name] || "Nobody"
+    greeting = "Hello, #{name}"
+    erb :index, :locals => {:greeting => greeting}
+  end
+end
 {% endhighlight %}
 
 Restart Sinatra (hit CTRL-C and then run it again) to make sure it loads again, then with your browser go to `http://localhost:4567/hello` which should display, "I just wanted to say Hello, Nobody." Next, change the URL in your browser to `http://localhost:4567/hello?name=Frank` and you'll see it say "Hello, Frank." Finally, change the `name=Frank` part to be your name. Now it's saying hello to you.
@@ -77,7 +77,7 @@ Let's break down the changes I made to your script.
 You're also not restricted to just one parameter on the URL. Change this example to give two variables like this: `http://localhost:4567/hello?name=Frank&greet=Hola`. Then change the code to get `params[:name]` and `params[:greet]` like this:
 
 {% highlight ruby linenos %}
-    greeting = "#{greet}, #{name}"
+greeting = "#{greet}, #{name}"
 {% endhighlight %}
 
 ## Creating HTML Forms
@@ -86,50 +86,50 @@ Passing the parameters on the URL works, but it's kind of ugly and not easy to u
 Let's make a quick one so you can see how it works. Here's the new HTML file you need to create, in `lib/views/hello_form.erb`:
 
 {% highlight erb linenos %}
-    <html>
-        <head>
-            <title>Sample Web Form</title>
-        </head>
-    <body>
-    
-    <h1>Fill Out This Form</h1>
-    
-    <form action="/hello" method="POST">
-        A Greeting: <input type="text" name="greet">
-        <br/>
-        Your Name: <input type="text" name="name">
-        <br/>
-        <input type="submit">
-    </form>
-    
-    </body>
-    </html>
+<html>
+    <head>
+        <title>Sample Web Form</title>
+    </head>
+<body>
+
+<h1>Fill Out This Form</h1>
+
+<form action="/hello" method="POST">
+    A Greeting: <input type="text" name="greet">
+    <br/>
+    Your Name: <input type="text" name="name">
+    <br/>
+    <input type="submit">
+</form>
+
+</body>
+</html>
 {% endhighlight %}
 
 You should then change `lib/gothonsweb.rb` to look like this:
 
 {% highlight ruby linenos %}
-    require_relative "gothonweb/version"
-    require "sinatra"
-    require "erb"
-    
-    module Gothonweb
-    
-      get '/' do
-        greeting = "Hello, World!"
-        erb :index, :locals => {:greeting => greeting}
-      end
-      
-      get '/hello' do
-        erb :hello_form
-      end
-    
-      post '/hello' do
-        greeting = "#{params[:greet] || "Hello"}, #{params[:name] || "Nobody"}"
-        erb :index, :locals => {:greeting => greeting} 
-      end
-    
-    end
+require_relative "gothonweb/version"
+require "sinatra"
+require "erb"
+
+module Gothonweb
+
+  get '/' do
+    greeting = "Hello, World!"
+    erb :index, :locals => {:greeting => greeting}
+  end
+  
+  get '/hello' do
+    erb :hello_form
+  end
+
+  post '/hello' do
+    greeting = "#{params[:greet] || "Hello"}, #{params[:name] || "Nobody"}"
+    erb :index, :locals => {:greeting => greeting} 
+  end
+
+end
 {% endhighlight %}
 
 Once you've got those written up, simply restart the web application again and hit it with your browser like before.
@@ -158,25 +158,25 @@ When you work on your game in the next Exercise, you'll need to make a bunch of 
 Change `lib/views/index.erb` to be like this:
 
 {% highlight erb linenos %}
-    <% if greeting %>
-      <p>I just wanted to say <em style="color: green; font-size: 2em;"><%= greeting %></em>.
-    <% else %>
-      <em>Hello</em>, world!
-    <% end %>
+<% if greeting %>
+  <p>I just wanted to say <em style="color: green; font-size: 2em;"><%= greeting %></em>.
+<% else %>
+  <em>Hello</em>, world!
+<% end %>
 {% endhighlight %}
 
 Change `lib/views/hello_form.erb` to be like this:
 
 {% highlight erb linenos %}
-    <h1>Fill Out This Form</h1>
-    
-    <form action="/hello" method="POST">
-        A Greeting: <input type="text" name="greet">
-        <br/>
-        Your Name: <input type="text" name="name">
-        <br/>
-        <input type="submit">
-    </form>
+<h1>Fill Out This Form</h1>
+
+<form action="/hello" method="POST">
+    A Greeting: <input type="text" name="greet">
+    <br/>
+    Your Name: <input type="text" name="name">
+    <br/>
+    <input type="submit">
+</form>
 {% endhighlight %}
 
 All we're doing is stripping out the "boilerplate" at the top and the bottom which is always on every page. We'll put that back into a single `lib/views/layout.erb` file that handles it for us from now on.
@@ -184,14 +184,14 @@ All we're doing is stripping out the "boilerplate" at the top and the bottom whi
 Once you have those changes, create a `lib/views/layout.erb` file with this in it:
 
 {% highlight erb linenos %}
-    <html>
-      <head>
-        <title>Gothons From Planet Percal #25</title>
-      </head>
-      <body>
-        <%= yield %>
-      </body>
-    </html>
+<html>
+  <head>
+    <title>Gothons From Planet Percal #25</title>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
 {% endhighlight %}
 
 Sinatra automatically looks for a layout template called `layout` by default to use as the *base* template for all other templates.  You can customize which template is used as the base for any given page, too.   Restart your application and then try to change the layout in interesting ways, but without changing the other templates.
@@ -202,30 +202,30 @@ It's easy to test a web application with your browser by just hitting refresh, b
 I've created a simple little function for that lets you assert things about your web application's response, aptly named `assert_response`. Create the file `test/tools.rb` with these contents:
 
 {% highlight ruby linenos %}
-    require 'test/unit'
-    
-    def assert_response(resp, contains=nil, matches=nil, headers=nil, status=200)
-    
-      assert_equal(resp.status, status, "Expected response #{status} not in #{resp}")
-    
-      if status == 200
-        assert(resp.body, "Response data is empty.")
-      end
-    
-      if contains
-        assert((resp.body.include? contains), "Response does not contain #{contains}")
-      end
-    
-      if matches
-        reg = Regexp.new(matches)
-        assert reg.match(contains), "Response does not match #{matches}"
-      end
-    
-      if headers
-        assert_equal(resp.headers, headers)
-      end
-    
-    end
+require 'test/unit'
+
+def assert_response(resp, contains=nil, matches=nil, headers=nil, status=200)
+
+  assert_equal(resp.status, status, "Expected response #{status} not in #{resp}")
+
+  if status == 200
+    assert(resp.body, "Response data is empty.")
+  end
+
+  if contains
+    assert((resp.body.include? contains), "Response does not contain #{contains}")
+  end
+
+  if matches
+    reg = Regexp.new(matches)
+    assert reg.match(contains), "Response does not match #{matches}"
+  end
+
+  if headers
+    assert_equal(resp.headers, headers)
+  end
+
+end
 {% endhighlight %}
 
 Finally, run `test/test_gothonsweb.rb` to test your web application:
@@ -247,7 +247,7 @@ The `rack/test` module we have included has a very simple API for processing req
 All mock request methods have the same argument signature:
 
 {% highlight ruby linenos %}
-    get '/path', params={}, rack_env={}
+get '/path', params={}, rack_env={}
 {% endhighlight %}
 
 * `/path` is the request path and may optionally include a query string.
@@ -259,7 +259,7 @@ This works without running an actual web server so you can do tests with automat
 To validate responses from this function, use the `assert_response` function from `test/tools.rb` which has:
 
 {% highlight ruby linenos %}
-    assert_response(resp, contains=nil, matches=nil, headers=nil, status=200)
+assert_response(resp, contains=nil, matches=nil, headers=nil, status=200)
 {% endhighlight %}
 
 Pass in the response you get from calling `get` or `post` then add things you want checked. Use the `contains` parameter to make sure that the response contains certain values. Use the `status` parameter to check for certain responses. There's actually quite a lot of information in this little function so it would be good for you to study it.

@@ -14,21 +14,21 @@ This exercise involves writing two files. One is your usual `ex15.rb` file that 
 What we want to do is "open" that file in our script and print it out. However, we do not want to just "hard code" the name `ex15_sample.txt` into our script. "Hard coding" means putting some bit of information that should come from the user as a string right in our program. That's bad because we want it to load other files later. The solution is to use `ARGV` and `STDIN.gets` to ask the user what file they want instead of "hard coding" the file's name.
 
 {% highlight ruby linenos %}
-    filename = ARGV.first
-    
-    prompt = "> "
-    txt = File.open(filename)
-    
-    puts "Here's your file: #{filename}"
-    puts txt.read()
-    
-    puts "I'll also ask you to type it again:"
-    print prompt
-    file_again = STDIN.gets.chomp()
-    
-    txt_again = File.open(file_again)
-    
-    puts txt_again.read()
+filename = ARGV.first
+
+prompt = "> "
+txt = File.open(filename)
+
+puts "Here's your file: #{filename}"
+puts txt.read()
+
+puts "I'll also ask you to type it again:"
+print prompt
+file_again = STDIN.gets.chomp()
+
+txt_again = File.open(file_again)
+
+puts txt_again.read()
 {% endhighlight %}
 
 A few fancy things are going on in this file, so let's break it down real quick:

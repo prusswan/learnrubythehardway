@@ -14,31 +14,31 @@ Functions do three things:
 You can create a function (also called "methods") by using the word `def` in Ruby. I'm going to have you make four different functions that work like your scripts, and then show you how each one is related.
 
 {% highlight ruby linenos %}
-    # this one is like your scripts with argv
-    def puts_two(*args)
-      arg1, arg2 = args
-      puts "arg1: #{arg1}, arg2: #{arg2}"
-    end
-    
-    # ok, that *args is actually pointless, we can just do this
-    def puts_two_again(arg1, arg2)
-      puts "arg1: #{arg1}, arg2: #{arg2}"
-    end
-    
-    # this just takes one argument
-    def puts_one(arg1)
-      puts "arg1: #{arg1}"
-    end
-    
-    # this one takes no arguments
-    def puts_none()
-      puts "I got nothin'."
-    end
-    
-    puts_two("Zed","Shaw")
-    puts_two_again("Zed","Shaw")
-    puts_one("First!")
-    puts_none()
+# this one is like your scripts with argv
+def puts_two(*args)
+  arg1, arg2 = args
+  puts "arg1: #{arg1}, arg2: #{arg2}"
+end
+
+# ok, that *args is actually pointless, we can just do this
+def puts_two_again(arg1, arg2)
+  puts "arg1: #{arg1}, arg2: #{arg2}"
+end
+
+# this just takes one argument
+def puts_one(arg1)
+  puts "arg1: #{arg1}"
+end
+
+# this one takes no arguments
+def puts_none()
+  puts "I got nothin'."
+end
+
+puts_two("Zed","Shaw")
+puts_two_again("Zed","Shaw")
+puts_one("First!")
+puts_none()
 {% endhighlight %}
 
 Let's break down the first function, `puts_two` which is the most similar to what you already know from making scripts:

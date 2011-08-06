@@ -36,8 +36,8 @@ When we get to nouns, we have a slight problem since each room could have a diff
 Once we have our lexicon of words we need a way to break up sentences so that we can figure out what they are. In our case, we've defined a sentence as "words separated by spaces", so we really just need to do this:
 
 {% highlight ruby linenos %}
-    stuff = gets.chomp()
-    words = stuff.split()
+stuff = gets.chomp()
+words = stuff.split()
 {% endhighlight %}
 
 That's really all we'll worry about for now, but this will work really well for quite a while.
@@ -46,10 +46,10 @@ That's really all we'll worry about for now, but this will work really well for 
 Once we know how to break up a sentence into words, we just have to go through the list of words and figure out what "type" they are. To do that we're going to use a handy little Ruby structure called a "struct". A struct is a convenient way to bundle a number of attributes together, using accessor methods, without having to write an explicit class. It's created like this:
 
 {% highlight ruby linenos %}
-    Pair = Struct.new(:token, :word)
-    first_word = Pair.new("direction", "north")
-    second_word = Pair.new("verb", "go")
-    sentence = [first_word, second_word]
+Pair = Struct.new(:token, :word)
+first_word = Pair.new("direction", "north")
+second_word = Pair.new("verb", "go")
+sentence = [first_word, second_word]
 {% endhighlight %}
 
 This creates a pair of (TOKEN, WORD) that lets you look at the word and do things with it.
@@ -76,13 +76,13 @@ That `ArgumentError` is an exception that the `Integer()` function threw because
 You deal with an exception by using the `begin` and `rescue` keywords:
 
 {% highlight ruby linenos %}
-    def convert_number(s)
-      begin
-        Integer(s)
-      rescue ArgumentError
-        nil
-      end
-    end
+def convert_number(s)
+  begin
+    Integer(s)
+  rescue ArgumentError
+    nil
+  end
+end
 {% endhighlight %}
 
 You put the code you want to "begin" inside the `begin` block, and then you put the code to run for the error inside the `rescue`. In this case, we want to call `Integer()` on something that might be a number. If that has an error, then we "rescue" it and return `nil` instead.
@@ -93,61 +93,61 @@ In your scanner that you write, you should use this function to test if somethin
 Here are the files `test/test_lexicon.rb` that you should use:
 
 {% highlight ruby linenos %}
-    require 'test/unit'
-    require_relative "../lib/lexicon"
-    
-    class LexiconTests < Test::Unit::TestCase
-    
-      Pair = Lexicon::Pair
-      @@lexicon = Lexicon.new()
-    
-      def test_directions()
-        assert_equal([Pair.new(:direction, 'north')], @@lexicon.scan("north"))
-        result = @@lexicon.scan("north south east")
-        assert_equal(result, [Pair.new(:direction, 'north'),
-                     Pair.new(:direction, 'south'),
-                     Pair.new(:direction, 'east')])
-      end
-    
-      def test_verbs()
-        assert_equal(@@lexicon.scan("go"), [Pair.new(:verb, 'go')])
-        result = @@lexicon.scan("go kill eat")
-        assert_equal(result, [Pair.new(:verb, 'go'),
-                     Pair.new(:verb, 'kill'),
-                     Pair.new(:verb, 'eat')])
-      end
-    
-      def test_stops()
-        assert_equal(@@lexicon.scan("the"), [Pair.new(:stop, 'the')])
-        result = @@lexicon.scan("the in of")
-        assert_equal(result, [Pair.new(:stop, 'the'),
-                     Pair.new(:stop, 'in'),
-                     Pair.new(:stop, 'of')])
-      end
-    
-      def test_nouns()
-        assert_equal(@@lexicon.scan("bear"), [Pair.new(:noun, 'bear')])
-        result = @@lexicon.scan("bear princess")
-        assert_equal(result, [Pair.new(:noun, 'bear'),
-                     Pair.new(:noun, 'princess')])
-      end
-    
-      def test_numbers()
-        assert_equal(@@lexicon.scan("1234"), [Pair.new(:number, 1234)])
-        result = @@lexicon.scan("3 91234")
-        assert_equal(result, [Pair.new(:number, 3),
-                     Pair.new(:number, 91234)])
-      end
-    
-      def test_errors()
-        assert_equal(@@lexicon.scan("ASDFADFASDF"), [Pair.new(:error, 'ASDFADFASDF')])
-        result = @@lexicon.scan("bear IAS princess")
-        assert_equal(result, [Pair.new(:noun, 'bear'),
-                     Pair.new(:error, 'IAS'),
-                     Pair.new(:noun, 'princess')])
-      end
-    
-    end
+require 'test/unit'
+require_relative "../lib/lexicon"
+
+class LexiconTests < Test::Unit::TestCase
+
+  Pair = Lexicon::Pair
+  @@lexicon = Lexicon.new()
+
+  def test_directions()
+    assert_equal([Pair.new(:direction, 'north')], @@lexicon.scan("north"))
+    result = @@lexicon.scan("north south east")
+    assert_equal(result, [Pair.new(:direction, 'north'),
+                 Pair.new(:direction, 'south'),
+                 Pair.new(:direction, 'east')])
+  end
+
+  def test_verbs()
+    assert_equal(@@lexicon.scan("go"), [Pair.new(:verb, 'go')])
+    result = @@lexicon.scan("go kill eat")
+    assert_equal(result, [Pair.new(:verb, 'go'),
+                 Pair.new(:verb, 'kill'),
+                 Pair.new(:verb, 'eat')])
+  end
+
+  def test_stops()
+    assert_equal(@@lexicon.scan("the"), [Pair.new(:stop, 'the')])
+    result = @@lexicon.scan("the in of")
+    assert_equal(result, [Pair.new(:stop, 'the'),
+                 Pair.new(:stop, 'in'),
+                 Pair.new(:stop, 'of')])
+  end
+
+  def test_nouns()
+    assert_equal(@@lexicon.scan("bear"), [Pair.new(:noun, 'bear')])
+    result = @@lexicon.scan("bear princess")
+    assert_equal(result, [Pair.new(:noun, 'bear'),
+                 Pair.new(:noun, 'princess')])
+  end
+
+  def test_numbers()
+    assert_equal(@@lexicon.scan("1234"), [Pair.new(:number, 1234)])
+    result = @@lexicon.scan("3 91234")
+    assert_equal(result, [Pair.new(:number, 3),
+                 Pair.new(:number, 91234)])
+  end
+
+  def test_errors()
+    assert_equal(@@lexicon.scan("ASDFADFASDF"), [Pair.new(:error, 'ASDFADFASDF')])
+    result = @@lexicon.scan("bear IAS princess")
+    assert_equal(result, [Pair.new(:noun, 'bear'),
+                 Pair.new(:error, 'IAS'),
+                 Pair.new(:noun, 'princess')])
+  end
+
+end
 {% endhighlight %}
 
 Remember that you will want to make a new project with your skeleton, type in this test case (do not copy-paste!) and write your scanner so that the test runs. Focus on the details and make sure everything works right.

@@ -17,29 +17,29 @@ When you type Ruby code that reads `mystuff.push('hello')` you are actually sett
 That might be a lot to take in, but we're going to spend a few exercises getting this concept firm in your brain. To kick things off, here's an exercise that mixes strings and lists for all kinds of fun.
 
 {% highlight ruby linenos %}
-    ten_things = "Apples Oranges Crows Telephone Light Sugar"
-    
-    puts "Wait there's not 10 things in that list, let's fix that."
-    
-    stuff = ten_things.split(' ')
-    more_stuff = %w(Day Night Song Frisbee Corn Banana Girl Boy)
-    
-    while stuff.length != 10
-      next_one = more_stuff.pop()
-      puts "Adding: #{next_one}"
-      stuff.push(next_one)
-      puts "There's #{stuff.length} items now."
-    end
-    
-    puts "There we go: #{stuff}"
-    
-    puts "Let's do some things with stuff."
-    
-    puts stuff[1]
-    puts stuff[-1] # whoa! fancy
-    puts stuff.pop()
-    puts stuff.join(' ') # what? cool!
-    puts stuff.values_at(3,5).join('#') # super stellar!
+ten_things = "Apples Oranges Crows Telephone Light Sugar"
+
+puts "Wait there's not 10 things in that list, let's fix that."
+
+stuff = ten_things.split(' ')
+more_stuff = %w(Day Night Song Frisbee Corn Banana Girl Boy)
+
+while stuff.length != 10
+  next_one = more_stuff.pop()
+  puts "Adding: #{next_one}"
+  stuff.push(next_one)
+  puts "There's #{stuff.length} items now."
+end
+
+puts "There we go: #{stuff}"
+
+puts "Let's do some things with stuff."
+
+puts stuff[1]
+puts stuff[-1] # whoa! fancy
+puts stuff.pop()
+puts stuff.join(' ') # what? cool!
+puts stuff.values_at(3,5).join('#') # super stellar!
 {% endhighlight %}
 
 ## What You Should See

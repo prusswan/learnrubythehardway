@@ -6,28 +6,28 @@ title: "Exercise 14: Prompting And Passing"
 Let's do one exercise that uses `ARGV` and `gets.chomp()` together to ask the user something specific. You will need this for the next exercise where we learn to read and write files. In this exercise we'll print a simple `>` prompt. This is similar to a game like Zork or Adventure.
 
 {% highlight ruby linenos %}
-    user = ARGV.first
-    prompt = '> '
-    
-    puts "Hi #{user}, I'm the #{$0} script."
-    puts "I'd like to ask you a few questions."
-    puts "Do you like me #{user}?"
-    print prompt
-    likes = STDIN.gets.chomp()
-    
-    puts "Where do you live #{user}?"
-    print prompt
-    lives = STDIN.gets.chomp()
-    
-    puts "What kind of computer do you have?"
-    print prompt
-    computer = STDIN.gets.chomp()
-    
-    puts <<MESSAGE
-    Alright, so you said #{likes} about liking me.
-    You live in #{lives}.  Not sure where that is.
-    And you have a #{computer} computer.  Nice.
-    MESSAGE
+user = ARGV.first
+prompt = '> '
+
+puts "Hi #{user}, I'm the #{$0} script."
+puts "I'd like to ask you a few questions."
+puts "Do you like me #{user}?"
+print prompt
+likes = STDIN.gets.chomp()
+
+puts "Where do you live #{user}?"
+print prompt
+lives = STDIN.gets.chomp()
+
+puts "What kind of computer do you have?"
+print prompt
+computer = STDIN.gets.chomp()
+
+puts <<MESSAGE
+Alright, so you said #{likes} about liking me.
+You live in #{lives}.  Not sure where that is.
+And you have a #{computer} computer.  Nice.
+MESSAGE
 {% endhighlight %}
 
 Notice though that we make a variable `prompt` that is set to the prompt we want, and we print that instead of typing it over and over. Now if we want to make the prompt something else, we just change it in this one spot and rerun the script.
