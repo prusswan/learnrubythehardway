@@ -25,4 +25,4 @@ From now on we will be calling these "features" that we import `modules`. I'll s
 ## Extra Credit
 1. Research the difference between `require` and `include`. How are they different? 
 2. Can you `require` a script that doesn't contain a `module` specifically?
-3. Figure out where Ruby which directories on your system Ruby will look in to find the modules you require.
+3. Figure out which directories on your system Ruby will look in to find the modules you require.
