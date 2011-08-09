@@ -240,9 +240,9 @@ Finally, run `test/test_gothonsweb.rb` to test your web application:
     
     Test run options: --seed 57414
 
-What I'm doing here is I'm actually importing the whole application from the `lib/gothonsweb.rb` module, then running it manually. 
+What I'm doing here is I'm actually importing the whole application from the `lib/gothonsweb.rb` library, then running it manually. 
 
-The `rack/test` module we have included has a very simple API for processing requests.  Its `get`, `put`, `post`, `delete`, and `head` methods simulate the respective type of request on the application.
+The `rack/test` library we have included has a very simple API for processing requests.  Its `get`, `put`, `post`, `delete`, and `head` methods simulate the respective type of request on the application.
 
 All mock request methods have the same argument signature:
 

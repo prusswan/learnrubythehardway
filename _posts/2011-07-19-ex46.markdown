@@ -106,5 +106,5 @@ This exercise doesn't have extra credit but a quiz you should complete:
 3. Make a project and start writing some code in the `NAME.rb` script.
 4. Put a script in the `bin` directory that you can run. Read about how you can make a Ruby script that's runnable for your system.
 5. Make sure the `bin` script you created is referenced in your `NAME.gemspec` so that it gets installed.
-6. Use your `NAME.gemspec` and `gem build` `gem install` to install your own module and make sure it works, then use `gem uninstall` to uninstall it.
+6. Use your `NAME.gemspec` and `gem build` `gem install` to install your own library and make sure it works, then use `gem uninstall` to uninstall it.
 7. Figure out how you can use Bundler to generate a skeleton directory automatically.

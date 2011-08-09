@@ -14,7 +14,7 @@ That should be all the explanation you need because your reason for writing unit
 ## Writing A Test Case
 We're going to take a very simple piece of code and write one simple test. We're going to base this little test on a new project from your project skeleton.
 
-First, make a `ex47` project from your project skeleton. Make sure you do it right and rename the module and get that first `test/test_ex47.rb` test file going right.
+First, make a `ex47` project from your project skeleton. Make sure you do it right and rename the library and get that first `test/test_ex47.rb` test file going right.
 
 Next, create a simple file `ex47/lib/game.rb` where you can put the code to test. This will be a very silly little class that we want to test with this code in it:
 
