@@ -2,7 +2,7 @@
 layout: post
 title: "Exercise 12: Libraries"
 ---
-# Exercise 12: Modules
+# Exercise 12: Libraries
 
 Take a look at this code:
 
