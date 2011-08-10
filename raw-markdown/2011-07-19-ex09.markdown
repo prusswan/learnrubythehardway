@@ -20,8 +20,10 @@
 ## What You Should See
 
     $ ruby ex9.rb
-    Here are the days:  Mon Tue Wed Thu Fri Sat Sun
-    Here are the months:  Jan
+    Here are the days:  
+    Mon Tue Wed Thu Fri Sat Sun
+    Here are the months:  
+    Jan
     Feb
     Mar
     Apr
