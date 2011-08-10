@@ -41,7 +41,7 @@ If you get stuck with this exercise, remember the tricks you have been taught so
 ## Extra Credit
 When I wrote this program the first time I had a mistake, and Ruby told me about it like this:
 
-    ex3.rb:8:in `<main>': undefined local variable or method `car_pool_capacity' for main:Object (NameError)
+    ex4.rb:8:in `<main>': undefined local variable or method `car_pool_capacity' for main:Object (NameError)
 
 Explain this error in your own words. Make sure you use line numbers and explain why.
 
