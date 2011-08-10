@@ -40,7 +40,6 @@ Look for the tab characters that you made. In this exercise the spacing is impor
     I'm split
     on a line.
     I'm \ a \ cat.
-    
     I'll do a list:
     	* Cat food
     	* Fishies
