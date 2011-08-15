@@ -52,7 +52,7 @@ To do this we need four tools:
 {% highlight ruby linenos %}
 def peek(word_list)
   begin
-    word_list.first
+    word_list.first.token
   rescue
     nil
   end
@@ -65,7 +65,7 @@ Very easy. Now for the match function:
 def match(word_list, expecting)
   begin
     word = word_list.shift
-    if word == expecting
+    if word.token == expecting
       word
     else
       nil
@@ -118,7 +118,7 @@ end
 
 def peek(word_list)
   begin
-    word_list.first
+    word_list.first.token
   rescue
     nil
   end
@@ -127,7 +127,7 @@ end
 def match(word_list, expecting)
   begin
     word = word_list.shift
-    if word == expecting
+    if word.token == expecting
       word
     else
       nil
