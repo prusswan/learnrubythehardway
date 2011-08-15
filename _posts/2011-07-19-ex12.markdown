@@ -24,7 +24,7 @@ On line 1 we have what's called a "require". This is how you add features to you
 ## Hold Up! Features Have Another Name
 I call them "features" here (these little things you require to make your Ruby program do more) but nobody else calls them features. I just used that name because I needed to trick you into learning what they are without jargon. Before you can continue, you need to learn their real name: `libraries`.
 
-From now on we will be calling these "features" that we require `libraries`. I'll say things like, "You want to require the `open-uri` library." They are also called "libraries" by other programmers, but let's just stick with `libraries`.
+From now on we will be calling these "features" that we require `libraries`. I'll say things like, "You want to require the `open-uri` library." They are also called "modules" by other programmers, but let's just stick with `libraries`.
 
 ## Extra Credit
 1. Research the difference between `require` and `include`. How are they different? 
