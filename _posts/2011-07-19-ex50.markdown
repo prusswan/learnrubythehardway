@@ -10,7 +10,7 @@ Before creating your first web application, you'll first need to install the "we
 
 In our case, we'll be using the Sinatra framework, but there are many, many, many others you can choose from. For now, learn Sinatra then branch out to another one when you're ready (or just keep using Sinatra since it's good enough).
 
-Using `gem` install Sintra:
+Using `gem` install Sinatra:
 
     $ gem install sinatra
     Fetching: tilt-1.3.2.gem (100%)

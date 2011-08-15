@@ -29,4 +29,4 @@ From now on we will be calling these "features" that we require `libraries`. I'l
 ## Extra Credit
 1. Research the difference between `require` and `include`. How are they different? 
 2. Can you `require` a script that doesn't contain a `library` specifically?
-3. Figure out where Ruby which directories on your system Ruby will look in to find the libraries you require.
+3. Figure out which directories on your system Ruby will look in to find the libraries you require.

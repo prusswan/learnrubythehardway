@@ -52,7 +52,7 @@ To do this we need four tools:
 {% highlight ruby linenos %}
 def peek(word_list)
   begin
-    word_list.first
+    word_list.first.token
   rescue
     nil
   end
@@ -65,7 +65,7 @@ Very easy. Now for the match function:
 def match(word_list, expecting)
   begin
     word = word_list.shift
-    if word == expecting
+    if word.token == expecting
       word
     else
       nil
@@ -118,7 +118,7 @@ end
 
 def peek(word_list)
   begin
-    word_list.first
+    word_list.first.token
   rescue
     nil
   end
@@ -127,7 +127,7 @@ end
 def match(word_list, expecting)
   begin
     word = word_list.shift
-    if word == expecting
+    if word.token == expecting
       word
     else
       nil
@@ -149,7 +149,7 @@ def parse_verb(word_list)
   if peek(word_list) == :verb
     return match(word_list, :verb)
   else
-    raise ParseError("Expected a verb next.")
+    raise ParserError.new("Expected a verb next.")
   end
 end
 
@@ -163,7 +163,7 @@ def parse_object(word_list)
   if next_word == :direction
     return match(word_list, :direction)
   else
-    raise ParseError("Expected a noun or direction next.")
+    raise ParserError.new("Expected a noun or direction next.")
   end
 end
 
@@ -186,7 +186,7 @@ def parse_sentence(word_list)
     # assume the subject is the player then
     return parse_subject(word_list, Pair.new(:noun, "player"))
   else
-    raise ParserError("Must start with subject, object, or verb not: #{start}")
+    raise ParserError.new("Must start with subject, object, or verb not: #{start}")
   end
 end
 {% endhighlight %}
