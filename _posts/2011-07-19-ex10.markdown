@@ -16,7 +16,7 @@ To solve this problem you escape double-quotes and single-quotes so Ruby knows t
 'I am 6\'2" tall.'  # escape single-quote inside string
 {% endhighlight %}
 
-The second way is by using here document syntax, which usess `<<NAME` and works like a string, but you also can put as many lines of text you as want until you type `NAME` again. We'll also play with these.
+The second way is by using here document syntax, which uses `<<NAME` and works like a string, but you also can put as many lines of text you as want until you type `NAME` again. We'll also play with these.
 
 {% highlight ruby linenos %}
 tabby_cat = "\tI'm tabbed in."
