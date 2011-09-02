@@ -49,7 +49,7 @@ puts "We'd have %s beans, %s jars, and %s crates." % secret_formula(start_point)
 
 ## What You Should See
 
-    $ python ex24.py
+    $ ruby ex24.rb
     Let's practice everything.
     You'd need to know 'bout escapes with \ that do 
      newlines and 	 tabs.
