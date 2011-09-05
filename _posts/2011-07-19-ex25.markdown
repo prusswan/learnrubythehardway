@@ -64,7 +64,7 @@ In this exercise we're going to interact with your `.rb` file inside the Ruby in
 Here's what it looks like when I do it:
 
     $ irb
-    irb(main):001:0> require 'ex25'
+    irb(main):001:0> require './ex25'
     => true
     irb(main):002:0> sentence = "All good things come to those who wait."
     => "All good things come to those who wait."
@@ -106,7 +106,7 @@ Here's what it looks like when I do it:
 
 Let's break this down line by line to make sure you know what's going on:
 
-1. Line 2 you require your `ex25.rb` Ruby file, just like other requires you have done. Notice you do not need to put the `.rb` at the end to require it. When you do this you make a `module` that has all your functions in it to use.
+1. Line 2 you require your `./ex25.rb` Ruby file, just like other requires you have done. Notice you do not need to put the `.rb` at the end to require it. When you do this you make a `module` that has all your functions in it to use.
 2. Line 4 you made a `sentence` to work with.
 3. Line 6 you use the `Ex25` module and call your first function `Ex25.break_words`. The `.` (dot, period) symbol is how you tell Ruby, "Hey, inside `Ex25` there's a function called `break_words` and I want to run it."
 4. Line 8 we do the same thing with `Ex25.sort_words` to get a sorted sentence.
