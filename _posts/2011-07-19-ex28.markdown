@@ -7,7 +7,7 @@ The logic combinations you learned from the last exercise are called "boolean" l
 
 In this exercise you will be taking the logic exercises you memorized and start trying them out in IRB. Take each of these logic problems, and write out what you think the answer will be. In each case it will be either true or false. Once you have the answers written down, you will start IRB in your terminal and type them in to confirm your answers.
 
-    1. true and True
+    1. true and true
     2. false and true
     3. 1 == 1 and 2 == 1
     4. "test" == "test"
