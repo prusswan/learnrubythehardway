@@ -250,7 +250,7 @@ You should have your game map working and a good unit test for it. I now want to
 4. Run their input through the game.
 5. Display the results and keep going until they die.
 
-To do this, you're going to take the trusty `lib/gothonsweb.rb` you've been hacking on and create a fully working, session based, game engine. The catch is I'm going to make a very simple one with basic HTML files, and it'll be up to you to complete it. Here's the base engine:
+To do this, you're going to take the trusty `lib/gothonweb.rb` you've been hacking on and create a fully working, session based, game engine. The catch is I'm going to make a very simple one with basic HTML files, and it'll be up to you to complete it. Here's the base engine:
 
 {% highlight ruby linenos %}
 require_relative "gothonweb/version"
@@ -323,8 +323,8 @@ That is the template to show a room as you travel through the game. Next you nee
 
 With those in place, you should now be able to do the following:
 
-1. Get the test `test/test_gothonsweb.rb` working again so that you are testing the game. You won't be able to do much more than a few clicks in the game because of sessions, but you should be able to do some basics.
-2. Run the `lib/gothonsweb.rb` script and test out the game.
+1. Get the test `test/test_gothonweb.rb` working again so that you are testing the game. You won't be able to do much more than a few clicks in the game because of sessions, but you should be able to do some basics.
+2. Run the `lib/gothonweb.rb` script and test out the game.
 3. You should be able to refresh and fix the game like normal, and work with the game HTML and engine until it does all the things you want it to do.
 
 ## Your Final Exam
@@ -337,7 +337,7 @@ Do you feel like this was a huge amount of information thrown at you all at once
 5. Complete the game map, making it as large and feature complete as possible.
 6. Give people a "help" system that lets them ask what they can do at each room in the game.
 7. Add any other features you can think of to the game.
-8. Create several "maps" and let people choose a game they want to run. Your `lib/gothonsweb.rb` engine should be able to run any map of rooms you give it, so you can support multiple games.
+8. Create several "maps" and let people choose a game they want to run. Your `lib/gothonweb.rb` engine should be able to run any map of rooms you give it, so you can support multiple games.
 9. Finally, use what you learned in Exercises 48 and 49 to create a better input processor. You have most of the code necessary, you just need to improve the grammar and hook it up to your input form and the GameEngine.
 
 Good luck!

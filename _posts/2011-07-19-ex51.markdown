@@ -45,7 +45,7 @@ This is the HTML (css, javascript, or images) your server wants to send back to 
 That is the fastest crash course in how a web browser accesses information on servers on the internet. It should work well enough for you to understand this exercise, but if not, read about it as much as you can until you get it. A really good way to do that is to take the diagram, and break different parts of the web application you did in Exercise 50. If you can break your web application in predictable ways using the diagram, you'll start to understand how it works.
 
 ## How Forms Work
-The best way to play with forms is to write some code that accepts form data, and then see what you can do. Take your `lib/gothonsweb.rb` file and make it look like this:
+The best way to play with forms is to write some code that accepts form data, and then see what you can do. Take your `lib/gothonweb.rb` file and make it look like this:
 
 {% highlight ruby linenos %}
 require_relative "gothonweb/version"
@@ -106,7 +106,7 @@ Let's make a quick one so you can see how it works. Here's the new HTML file you
 </html>
 {% endhighlight %}
 
-You should then change `lib/gothonsweb.rb` to look like this:
+You should then change `lib/gothonweb.rb` to look like this:
 
 {% highlight ruby linenos %}
 require_relative "gothonweb/version"
@@ -199,7 +199,7 @@ Sinatra automatically looks for a layout template called `layout` by default to 
 ## Writing Automated Tests For Forms
 It's easy to test a web application with your browser by just hitting refresh, but come on, we're programmers here. Why do some repetitive task when we can write some code to test our application? What you're going to do next is write a little test for your web application form based on what you learned in Exercise 47. If you don't remember Exercise 47, read it again.
 
-I've created a simple little function for that lets you assert things about your web application's response, aptly named `assert_response`. Create the file `test/tools.rb` with these contents:
+I've created a simple little function for that lets you assert things about your web application's response, aptly named `assert_response`. Create the file `test/test_gothonweb.rb` with these contents:
 
 {% highlight ruby linenos %}
 require 'test/unit'
@@ -228,7 +228,7 @@ def assert_response(resp, contains=nil, matches=nil, headers=nil, status=200)
 end
 {% endhighlight %}
 
-Finally, run `test/test_gothonsweb.rb` to test your web application:
+Finally, run `test/test_gothonweb.rb` to test your web application:
 
     $ ruby test/test_gothonweb.rb 
     Loaded suite test/test_gothonweb
@@ -240,7 +240,7 @@ Finally, run `test/test_gothonsweb.rb` to test your web application:
     
     Test run options: --seed 57414
 
-What I'm doing here is I'm actually importing the whole application from the `lib/gothonsweb.rb` library, then running it manually. 
+What I'm doing here is I'm actually importing the whole application from the `lib/gothonweb.rb` library, then running it manually. 
 
 The `rack/test` library we have included has a very simple API for processing requests.  Its `get`, `put`, `post`, `delete`, and `head` methods simulate the respective type of request on the application.
 
@@ -256,7 +256,7 @@ get '/path', params={}, rack_env={}
 
 This works without running an actual web server so you can do tests with automated tests and also use your browser to test a running server.
 
-To validate responses from this function, use the `assert_response` function from `test/tools.rb` which has:
+To validate responses from this function, use the `assert_response` function from `test/test_gothonweb.rb` which has:
 
 {% highlight ruby linenos %}
 assert_response(resp, contains=nil, matches=nil, headers=nil, status=200)
@@ -264,7 +264,7 @@ assert_response(resp, contains=nil, matches=nil, headers=nil, status=200)
 
 Pass in the response you get from calling `get` or `post` then add things you want checked. Use the `contains` parameter to make sure that the response contains certain values. Use the `status` parameter to check for certain responses. There's actually quite a lot of information in this little function so it would be good for you to study it.
 
-In the `test/test_gothonsweb.rb` automated test I'm first making sure the `/foo` URL returns a "404 Not Found" response, since it actually doesn't exist. Then I'm checking that `/hello` works with both a GET and POST form. Following the test should be fairly simple, even if you might not totally know what's going on.
+In the `test/test_gothonweb.rb` automated test I'm first making sure the `/foo` URL returns a "404 Not Found" response, since it actually doesn't exist. Then I'm checking that `/hello` works with both a GET and POST form. Following the test should be fairly simple, even if you might not totally know what's going on.
 
 Take some time studying this latest application, especially how the automated testing works.
 
