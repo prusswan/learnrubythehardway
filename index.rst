@@ -1,3 +1,6 @@
+Learn Ruby The Hard Way
+=======================
+
 Welcome to Learn Ruby the hard way.   This is a translation of "Learn Python The Hard Way" to teach total
 beginners Ruby.   This version is a recent *rough* translation and still need some cleanup.  If you have
 problems email help@learncodethehardway.org.
