@@ -46,7 +46,7 @@ go for when you copy it.
 Finally you will want a simple skeleton file for unit tests (which will
 talk about more in the next lesson) named ``test/test_NAME.rb``:
 
-.. literalinclude:: missing.rb
+.. literalinclude:: ex/ex46_tests.rb
     :language: ruby
     :linenos:
 
