@@ -300,7 +300,7 @@ Create the file ``test/test_gothonweb.rb`` with these contents:
 
 Finally, run ``test/test_gothonweb.rb`` to test your web application:
 
-::
+.. code-block:: console
 
     $ ruby test/test_gothonweb.rb 
     Loaded suite test/test_gothonweb

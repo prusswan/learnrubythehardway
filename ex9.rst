@@ -8,7 +8,7 @@ Exercise 9: Printing, Printing, Printing
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex9.rb
     Here are the days:  

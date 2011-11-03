@@ -12,7 +12,7 @@ Skeleton Contents: Linux/OSX
 First, create the structure of your skeleton directory with these
 commands:
 
-::
+.. code-block:: console
 
     $ mkdir -p projects
     $ cd projects/
@@ -28,7 +28,7 @@ skeleton.
 
 Next we need to setup some initial files:
 
-::
+.. code-block:: console
 
     $ touch lib/NAME.rb
     $ touch lib/NAME/version.rb

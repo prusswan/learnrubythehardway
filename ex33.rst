@@ -47,7 +47,7 @@ three things:
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex33.rb
     At the top i is 0

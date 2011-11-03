@@ -21,7 +21,7 @@ Just like your other scripts, run this one with two arguments, the file
 to copy from and the file to copy it to. If we use your ``test.txt``
 file from before we get this:
 
-::
+.. code-block:: console
 
     $ ruby ex17.rb test.txt copied.txt
     Copying from test.txt to copied.txt

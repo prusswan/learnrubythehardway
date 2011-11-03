@@ -81,7 +81,7 @@ fun.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex41.rb
 

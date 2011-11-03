@@ -89,7 +89,7 @@ What You Should See
 After you have tried to guess at these, this is what your session with
 IRB might look like:
 
-::
+.. code-block:: console
 
     $ irb
     ruby-1.9.2-p180 :001 > true and true

@@ -59,7 +59,7 @@ What You Should See
 
 If you run the above script you should see:
 
-::
+.. code-block:: console
 
     $ ruby ex18.rb
     arg1: 'Zed', arg2: 'Shaw'

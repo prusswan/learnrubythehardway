@@ -105,7 +105,7 @@ you may have run. What happens is your function "raises" an exception
 when it encounters an error, then you have to handle that exception. For
 example, if you type this into IRB:
 
-::
+.. code-block:: console
 
     ruby-1.9.2-p180 :001 > Integer("hell")
     ArgumentError: invalid value for Integer(): "hell"

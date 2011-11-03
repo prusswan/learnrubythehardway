@@ -34,7 +34,7 @@ complete the table. For example, ``+`` does addition.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex3.rb 
     I will now count my chickens:

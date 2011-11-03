@@ -8,7 +8,7 @@ Exercise 8: Printing, Printing
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex8.rb
     1 2 3 4

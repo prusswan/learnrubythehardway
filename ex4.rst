@@ -32,7 +32,7 @@ taught so far of finding differences and focusing on details:
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex4.rb
     There are 100 cars available.

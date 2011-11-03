@@ -31,7 +31,7 @@ What You Should See
 
 Here is me playing this little adventure game. I do not do so well.
 
-::
+.. code-block:: console
 
     $ ruby ex31.rb
     You enter a dark room with two doors.  Do you go through door #1 or door #2?

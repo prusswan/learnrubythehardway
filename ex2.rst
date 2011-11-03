@@ -13,7 +13,7 @@ use comments in Ruby:
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex2.rb 
     I could have code like this.

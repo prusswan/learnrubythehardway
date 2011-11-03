@@ -12,7 +12,7 @@ file that you will run, but the other is named ``ex15_sample.txt``. This
 second file isn't a script but a plain text file we'll be reading in our
 script. Here are the contents of that file:
 
-::
+.. code-block:: console
 
     This is stuff I typed into a file.
     It is really cool stuff.
@@ -56,7 +56,7 @@ What You Should See
 
 I made a file called "ex15\_sample.txt" and ran my script.
 
-::
+.. code-block:: console
 
     $ ruby ex15.rb ex15_sample.txt 
     Here's your file 'ex15_sample.txt':

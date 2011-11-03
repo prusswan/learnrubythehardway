@@ -24,7 +24,7 @@ exactly the same.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex5.rb
     Let's talk about Zed A. Shaw.

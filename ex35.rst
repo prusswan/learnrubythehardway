@@ -14,7 +14,7 @@ What You Should See
 
 Here's me playing the game:
 
-::
+.. code-block:: console
 
     $ ruby ex35.rb
     You are in a dark room.

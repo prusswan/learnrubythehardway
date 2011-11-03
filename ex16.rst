@@ -34,7 +34,7 @@ What You Should See
 There are actually two things you will see, first the output of your new
 script:
 
-::
+.. code-block:: console
 
     $ ruby ex16.rb test.txt
     We're going to erase 'test.txt'.

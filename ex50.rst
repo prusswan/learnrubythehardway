@@ -27,7 +27,7 @@ since it's good enough).
 
 Using ``gem`` install Sinatra:
 
-::
+.. code-block:: console
 
     $ gem install sinatra
     Fetching: tilt-1.3.2.gem (100%)
@@ -47,7 +47,7 @@ Now you're going to make an initial very simple "Hello World" web
 application and project directory using Sinatra. First, make your
 project directory:
 
-::
+.. code-block:: console
 
     $ cd projects
     $ bundle gem gothonweb
@@ -63,7 +63,7 @@ Put the following code into ``lib/gothonweb.rb``:
 
 Then run the application like this:
 
-::
+.. code-block:: console
 
     $ ruby lib/gothonweb.rb
     == Sinatra/1.2.6 has taken the stage on 4567 for development with backup from WEBrick

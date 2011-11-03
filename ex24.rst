@@ -14,7 +14,7 @@ them, get them exactly right, and do your checks.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex24.rb
     Let's practice everything.

@@ -18,7 +18,7 @@ Ruby works best with files ending in ``.rb``.
 
 Then in Terminal run the file by typing:
 
-::
+.. code-block:: console
 
     ruby ex1.rb
 
@@ -28,7 +28,7 @@ not, you have done something wrong. No, the computer is not wrong.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex1.rb
     Hello World!
@@ -45,9 +45,9 @@ but if your output is not exactly the same, find out why and fix it.
 
 If you have an error it will look like this:
 
-::
+.. code-block:: console
 
-     ruby ex1.rb
+    ruby ex1.rb
     ex1.rb:4: syntax error, unexpected tCONSTANT, expecting $end
     puts "This is fun."
               ^

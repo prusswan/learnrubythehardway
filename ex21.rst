@@ -33,7 +33,7 @@ credit to get you to solve a puzzle and learn something cool.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex21.rb
     Let's do some math with just functions!

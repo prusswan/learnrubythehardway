@@ -37,7 +37,7 @@ Type this one in and make it work too.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex30.rb
     We should take the cars.

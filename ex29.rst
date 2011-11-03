@@ -12,7 +12,7 @@ we'll try see if your practice has paid off.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex29.rb 
     Too many cats! The world is doomed!

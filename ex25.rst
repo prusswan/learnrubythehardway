@@ -25,7 +25,7 @@ the Ruby interpreter (IRB) you used periodically to do calculations.
 
 Here's what it looks like when I do it:
 
-::
+.. code-block:: console
 
     $ irb
     irb(main):001:0> require './ex25'

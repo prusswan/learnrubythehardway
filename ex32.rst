@@ -18,9 +18,12 @@ array is a container of things that are organized in order. It's not
 complicated; you just have to learn a new syntax. First, there's how you
 make an array:
 
-.. literalinclude:: ex/ex32.rb
-    :language: ruby
-    :linenos:
+.. code-block:: ruby
+    
+    hairs = ['brown', 'blond', 'red']
+    eyes = ['brown', 'blue', 'green']
+    weights = [1, 2, 3, 4]
+
 
 
 What you do is start the array with the ``[`` (left-bracket) which
@@ -45,14 +48,15 @@ to the variable.
 
 We now will build some arrays using some loops and print them out:
 
-.. literalinclude:: missing.rb
+.. literalinclude:: ex/ex32.rb
     :language: ruby
     :linenos:
+
 
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex32.rb
     This is count 1

@@ -90,7 +90,7 @@ Follow these general loose set of guidelines when making your tests:
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby test_ex47.rb 
     Loaded suite test_ex47

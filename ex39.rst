@@ -43,7 +43,7 @@ exercise that mixes strings and lists for all kinds of fun.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex39.rb 
     Wait there's not 10 things in that list, let's fix that.

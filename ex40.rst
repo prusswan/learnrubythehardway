@@ -97,7 +97,7 @@ on in your head very soon.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex40.rb 
     State? (ENTER to quit) > CA

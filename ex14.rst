@@ -23,7 +23,7 @@ What You Should See
 When you run this, remember that you have to give the script your name
 for the ``ARGV`` arguments.
 
-::
+.. code-block:: console
 
     $ ruby ex14.rb Zed
     Hi Zed, I'm the ex14.rb script.

@@ -10,7 +10,7 @@ This tutorial assumes that you are using Ruby version 1.9.2.
 Your system might already have Ruby installed. Open up a console and try
 running:
 
-::
+.. code-block:: console
 
     $ ruby -v
     ruby 1.9.2
@@ -78,7 +78,7 @@ Here's me doing the above on my computer in Terminal. Your computer
 would be different, so see if you can figure out all the differences
 between what I did and what you should do.
 
-::
+.. code-block:: console
 
     Last login: Sat Apr 24 00:56:54 on ttys001
     ~ $ irb
@@ -152,7 +152,7 @@ Windows
 Windows: What You Should See
 ----------------------------
 
-::
+.. code-block:: console
 
     C:\Documents and Settings\you>irb
     ruby-1.9.2-p180 :001 >
@@ -233,7 +233,7 @@ how to install packages so here are your instructions:
 Linux: What You Should See
 --------------------------
 
-::
+.. code-block:: console
 
     $ irb
     ruby-1.9.2-p180 :001 > 

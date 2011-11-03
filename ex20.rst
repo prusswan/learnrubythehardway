@@ -15,7 +15,7 @@ we run ``print_a_line``.
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex20.rb test.txt
     First let's print the whole file:

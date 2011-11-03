@@ -13,7 +13,7 @@ and do not skip! Do not paste!
 What You Should See
 -------------------
 
-::
+.. code-block:: console
 
     $ ruby ex7.rb
     Mary had a little lamb.
