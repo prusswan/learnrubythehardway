@@ -18,7 +18,7 @@ module Gothonweb
     if session[:room]
       erb :show_room, :locals => {:room => session[:room]}
     else
-      # why is there here? do you need it?
+      # why is this here? do you need it?
       erb :you_died
     end
   end
