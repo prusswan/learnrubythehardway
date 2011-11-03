@@ -57,7 +57,7 @@ application, so that's why you're calling it ``gothonweb``. Before you
 do that, we need to create the most basic Sinatra application possible.
 Put the following code into ``lib/gothonweb.rb``:
 
-.. literalinclude:: ex/ex50.rb
+.. literalinclude:: ex/ex50/gothonweb/lib/gothonweb_1.rb
     :language: ruby
     :linenos:
 
@@ -149,8 +149,8 @@ simple template that says "Hello World" in a big green font.
 The first step is to create a ``lib/views/index.erb`` file that looks
 like this:
 
-.. literalinclude:: missing.rb
-    :language: ruby
+.. literalinclude:: ex/ex50/gothonweb/lib/views/index.erb
+    :language: erb
     :linenos:
 
 What is a ``.erb`` file? ERB stands for Embedded Ruby.
@@ -166,17 +166,9 @@ To make your ``lib/gothonweb.rb`` script do this, you need to add some
 code to tell Sinatra where to load the template and to render it. Take
 that file and change it like this:
 
-.. code-block:: ruby
-
-    require_relative "gothonweb/version"
-    require "sinatra" require "erb"
-
-    module Gothonweb
-        get '/' do
-            greeting = "Hello, World!"
-            erb :index, :locals => {:greeting => greeting}
-        end
-    end 
+.. literalinclude:: ex/ex50/gothonweb/lib/gothonweb.rb
+    :language: ruby
+    :linenos:
 
 Pay close attention to how I changed the last line of the ``/`` block so
 it calls ``erb`` passing in your greeting variable.

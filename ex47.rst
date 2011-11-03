@@ -51,7 +51,7 @@ test with this code in it:
 
 Once you have that file, change unit test skeleton to this:
 
-.. literalinclude:: missing.rb
+.. literalinclude:: ex/ex47_tests.rb
     :language: ruby
     :linenos:
 

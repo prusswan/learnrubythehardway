@@ -53,9 +53,11 @@ that we can figure out what they are. In our case, we've defined a
 sentence as "words separated by spaces", so we really just need to do
 this:
 
-.. literalinclude:: ex/ex48.rb
-    :language: ruby
-    :linenos:
+.. code-block:: ruby
+
+    stuff = gets.chomp()
+    words = stuff.split()
+
 
 That's really all we'll worry about for now, but this will work really
 well for quite a while.
@@ -70,9 +72,14 @@ A struct is a convenient way to bundle a number of attributes together,
 using accessor methods, without having to write an explicit class. It's
 created like this:
 
-.. literalinclude:: missing.rb
-    :language: ruby
-    :linenos:
+
+.. code-block:: ruby
+
+    Pair = Struct.new(:token, :word)
+    first_word = Pair.new("direction", "north")
+    second_word = Pair.new("verb", "go")
+    sentence = [first_word, second_word]
+
 
 This creates a pair of (TOKEN, WORD) that lets you look at the word and
 do things with it.
@@ -124,9 +131,15 @@ function raises the ``TypeError`` exception and you deal with it.
 You deal with an exception by using the ``begin`` and ``rescue``
 keywords:
 
-.. literalinclude:: missing.rb
-    :language: ruby
-    :linenos:
+.. code-block:: ruby
+
+    def convert_number(s)
+      begin
+        Integer(s)
+      rescue ArgumentError
+        nil
+      end
+    end
 
 You put the code you want to "begin" inside the ``begin`` block, and
 then you put the code to run for the error inside the ``rescue``. In
@@ -143,9 +156,10 @@ What You Should Test
 
 Here are the files ``test/test_lexicon.rb`` that you should use:
 
-.. literalinclude:: missing.rb
+.. literalinclude:: ex/ex48.rb
     :language: ruby
     :linenos:
+
 
 Remember that you will want to make a new project with your skeleton,
 type in this test case (do not copy-paste!) and write your scanner so

@@ -146,7 +146,7 @@ The best way to play with forms is to write some code that accepts form
 data, and then see what you can do. Take your ``lib/gothonweb.rb`` file
 and make it look like this:
 
-.. literalinclude:: ex/ex51.rb
+.. literalinclude:: ex/ex51/gothonweb/lib/gothonweb_1.rb
     :language: ruby
     :linenos:
 
@@ -189,13 +189,13 @@ application just like you did above.
 Let's make a quick one so you can see how it works. Here's the new HTML
 file you need to create, in ``lib/views/hello_form.erb``:
 
-.. literalinclude:: missing.rb
-    :language: ruby
+.. literalinclude:: ex/ex51/gothonweb/lib/views/hello_form_1.erb
+    :language: erb
     :linenos:
 
 You should then change ``lib/gothonweb.rb`` to look like this:
 
-.. literalinclude:: missing.rb
+.. literalinclude:: ex/ex51/gothonweb/lib/gothonweb.rb
     :language: ruby
     :linenos:
 
@@ -253,14 +253,14 @@ essential for being a good programmer.
 
 Change ``lib/views/index.erb`` to be like this:
 
-.. literalinclude:: missing.rb
-    :language: ruby
+.. literalinclude:: ex/ex51/gothonweb/lib/views/index.erb
+    :language: erb
     :linenos:
 
 Change ``lib/views/hello_form.erb`` to be like this:
 
-.. literalinclude:: missing.rb
-    :language: ruby
+.. literalinclude:: ex/ex51/gothonweb/lib/views/hello_form.erb
+    :language: erb
     :linenos:
 
 All we're doing is stripping out the "boilerplate" at the top and the
@@ -270,8 +270,8 @@ bottom which is always on every page. We'll put that back into a single
 Once you have those changes, create a ``lib/views/layout.erb`` file with
 this in it:
 
-.. literalinclude:: missing.rb
-    :language: ruby
+.. literalinclude:: ex/ex51/gothonweb/lib/views/layout.erb
+    :language: erb
     :linenos:
 
 Sinatra automatically looks for a layout template called ``layout`` by
@@ -294,7 +294,7 @@ I've created a simple little function for that lets you assert things
 about your web application's response, aptly named ``assert_response``.
 Create the file ``test/test_gothonweb.rb`` with these contents:
 
-.. literalinclude:: missing.rb
+.. literalinclude:: ex/ex51/gothonweb/test/test_gothonweb.rb
     :language: ruby
     :linenos:
 
@@ -344,7 +344,7 @@ function from ``test/test_gothonweb.rb`` which has:
 
 .. code-block:: ruby
 
-    assert\_response(resp, contains=nil, matches=nil, headers=nil, status=200) 
+    assert_response(resp, contains=nil, matches=nil, headers=nil, status=200) 
 
 Pass in the response you get from calling ``get`` or ``post`` then add
 things you want checked. Use the ``contains`` parameter to make sure

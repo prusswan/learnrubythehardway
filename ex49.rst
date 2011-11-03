@@ -4,9 +4,33 @@ Exercise 49: Making Sentences
 What we should be able to get from our little game lexicon scanner is a
 list that looks like this (yours will be formatted differently):
 
-.. literalinclude:: ex/ex49.rb
-    :language: ruby
-    :linenos:
+.. code-block:: console
+
+    ruby-1.9.2-p180 :003 > print Lexicon.scan("go north")
+    [#<struct Lexicon::Pair token=:verb, word="go">,
+        #<struct Lexicon::Pair token=:direction, word="north">] => nil 
+    ruby-1.9.2-p180 :004 > print Lexicon.scan("kill the princess")
+    [#<struct Lexicon::Pair token=:verb, word="kill">,
+        #<struct Lexicon::Pair token=:stop, word="the">,
+        #<struct Lexicon::Pair token=:noun, word="princess">] => nil
+    ruby-1.9.2-p180 :005 > print Lexicon.scan("eat the bear")
+    [#<struct Lexicon::Pair token=:verb, word="eat">,
+        #<struct Lexicon::Pair token=:stop, word="the">,
+        #<struct Lexicon::Pair token=:noun, word="bear">] => nil 
+    ruby-1.9.2-p180 :006 > print Lexicon.scan("open the door and smack the bear in the nose")
+    [#<struct Lexicon::Pair token=:error, word="open">,
+        #<struct Lexicon::Pair token=:stop, word="the">, 
+        #<struct Lexicon::Pair token=:noun, word="door">, 
+        #<struct Lexicon::Pair token=:error, word="and">, 
+        #<struct Lexicon::Pair token=:error, word="smack">, 
+        #<struct Lexicon::Pair token=:stop, word="the">, 
+        #<struct Lexicon::Pair token=:noun, word="bear">, 
+        #<struct Lexicon::Pair token=:stop, word="in">, 
+        #<struct Lexicon::Pair token=:stop, word="the">, 
+        #<struct Lexicon::Pair token=:error, word="nose">] => nil 
+    ruby-1.9.2-p180 :007 >
+
+
 
 Now let us turn this into something the game can work with, which would
 be some kind of Sentence class.
@@ -37,11 +61,11 @@ To do this we need four tools:
 .. code-block:: ruby
 
     def peek(word_list) 
-        begin 
-            word_list.first.token 
-        rescue 
-            nil 
-        end 
+      begin 
+        word_list.first.token 
+      rescue 
+        nil 
+      end 
     end
 
 Very easy. Now for the match function:
@@ -49,16 +73,17 @@ Very easy. Now for the match function:
 .. code-block:: ruby
 
     def match(word_list, expecting)
-        begin
-            word = word_list.shift
-            if word.token == expecting
-                word
-            else
-                nil
-            end
-        rescue
-            nil
+      begin
+        word = word_list.shift
+
+        if word.token == expecting
+          word
+        else
+          nil
         end
+      rescue
+         nil
+      end
     end 
 
 Again, very easy, and finally our skip function:
@@ -66,9 +91,9 @@ Again, very easy, and finally our skip function:
 .. code-block:: ruby
 
     def skip(word_list, word_type)
-        while peek(word_list) == word_type
-            match(word_list, word_type) 
-        end 
+      while peek(word_list) == word_type
+        match(word_list, word_type) 
+      end 
     end 
 
 By now you should be able to figure out what these do. Make sure you
@@ -97,7 +122,7 @@ have to write the test.
 Here's the code that I wrote for parsing simple sentences using the
 ``ex48`` Lexicon class:
 
-.. literalinclude:: missing.rb
+.. literalinclude:: ex/ex49.rb
     :language: ruby
     :linenos:
 
