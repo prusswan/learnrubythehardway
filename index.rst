@@ -5,7 +5,7 @@ Welcome to Learn Ruby the hard way.   This is a translation of "Learn Python The
 beginners Ruby.   This version is a recent *rough* translation and still need some cleanup.  If you have
 problems email help@learncodethehardway.org.
 
-.. warning:: This book is being converted so a bunch of the code is missing.  Only bother reading it if you want to help find problems.
+.. warning:: This book was recently converted from an older format, so if you find errors please email help@learncodethehardway.org.  Thanks.
 
 .. toctree::
    :maxdepth: 1

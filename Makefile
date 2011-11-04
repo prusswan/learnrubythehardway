@@ -94,5 +94,4 @@ doctest:
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
 sync: clean html
-	rsync -aczv _build/html/* $(USER)@learnpythonthehardway.org:/var/www/learnpythonthehardway.org/book/
-	rsync -aczv site/* $(USER)@learnpythonthehardway.org:/var/www/learnpythonthehardway.org/
+	rsync -aczv --delete _build/html/* $(USER)@learncodethehardway.org:/var/www/learncodethehardway.org/ruby/book/
