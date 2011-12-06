@@ -15,9 +15,9 @@ Programming". This is an old style of programming where you make
 of this. A whole lot. You just didn't know it. Remember when you were
 doing this:
 
-.. literalinclude:: ex/ex42.rb
-    :language: ruby
-    :linenos:
+.. code-block:: ruby
+    stuff = ['Test', 'This', 'Out']
+    puts stuff.join(' ')
 
 You were actually using classes. The variable stuff is actually an Array
 class. The ``stuff.join(' ')`` is calling the ``join`` function of the
@@ -28,20 +28,49 @@ Well, and objects, but let's just skip that word for now. You'll learn
 what those are after you make some classes. How do you make classes?
 Very similar to how you made the ``ROOMS`` hash, but easier:
 
-.. literalinclude:: ex/ex42.rb
-    :language: ruby
-    :linenos:
+.. code-block:: ruby
+    class TheThing
+      attr_reader :number
+    
+      def initialize()
+        @number = 0
+      end
+    
+      def some_function()
+        puts "I got called."
+      end
+    
+      def add_me_up(more)
+        @number += more
+        return @number
+      end
+    end
+    
+    # two different things
+    a = TheThing.new
+    b = TheThing.new
+    
+    a.some_function()
+    b.some_function()
+    
+    puts a.add_me_up(20)
+    puts a.add_me_up(20)
+    puts b.add_me_up(30)
+    puts b.add_me_up(30)
+    
+    puts a.number
+    puts b.number
 
-See the ``@`` symbol before the ``@name`` variable? That makes it an
+See the ``@`` symbol before the ``@number`` variable? That makes it an
 instance variable. Every instance of ``TheThing`` that you create will
-have its own value for ``@name``. Instance variables are hidden away
+have its own value for ``@number``. Instance variables are hidden away
 inside the object. We can't get at the name simply by typing
 ``a.number`` *unless* we explicitly make that data readable to the
 outside world.
 
-By including the ``attr_reader :name`` line. To make ``@name``
-write-only, we could do ``attr_writer :name``. And to make it read/write
-we could do ``attr_accessor :name``. Ruby uses the good object-oriented
+By including the ``attr_reader :number`` line. To make ``@number``
+write-only, we could do ``attr_writer :number``. And to make it read/write
+we could do ``attr_accessor :number``. Ruby uses the good object-oriented
 principle of encapsulating data.
 
 Next, see the ``initialize`` method? That is how you set up a Ruby class
