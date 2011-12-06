@@ -1,11 +1,10 @@
 Learn Ruby The Hard Way
 =======================
 
-Welcome to Learn Ruby the hard way.   This is a translation of "Learn Python The Hard Way" to teach total
-beginners Ruby.   This version is a recent *rough* translation and still need some cleanup.  If you have
-problems email help@learncodethehardway.org.
-
-.. warning:: This book was recently converted from an older format, so if you find errors please email help@learncodethehardway.org.  Thanks.
+Welcome to Learn Ruby the hard way. This is a translation of "Learn Python The
+Hard Way" to teach total beginners Ruby.   It's in the same style, and the
+content is nearly the same, but it will teach you Ruby.  If you have problems
+email help@learncodethehardway.org.
 
 .. toctree::
    :maxdepth: 1

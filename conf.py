@@ -175,7 +175,7 @@ latex_font_size = '10pt'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'LearnRubyTheHardWay.tex', u'Learn Ruby The Hard Way',
-   u'Zed A. Shaw', 'manual'),
+   u'Zed A. Shaw and Rob Sobers', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
