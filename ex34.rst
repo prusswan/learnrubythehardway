@@ -83,7 +83,7 @@ Extra Credit
 
 1. Read about ordinal and cardinal numbers online.
 2. With what you know of the difference between these types of numbers,
-   can you explain why this really is 2010? (Hint, you can't pick years
+   can you explain why this really is 2011? (Hint, you can't pick years
    at random.)
 3. Write some more arrays and work out similar indexes until you can
    translate them.
