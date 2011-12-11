@@ -38,7 +38,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Learn Ruby The Hard Way'
-copyright = u'2010, Zed A. Shaw'
+copyright = u'2010, Zed A. Shaw and Rob Sobers'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -175,7 +175,7 @@ latex_font_size = '10pt'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'LearnRubyTheHardWay.tex', u'Learn Ruby The Hard Way',
-   u'Zed A. Shaw', 'manual'),
+   u'Zed A. Shaw and Rob Sobers', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -203,6 +203,8 @@ latex_preamble = r"""
 #1\par\nobreak\vspace{40 pt}}}
 \makeatother
 """
+
+epub_uid = "959BABED-0637-4A18-B622-7F802EA02046"
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []

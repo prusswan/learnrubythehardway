@@ -16,6 +16,7 @@ of this. A whole lot. You just didn't know it. Remember when you were
 doing this:
 
 .. code-block:: ruby
+
     stuff = ['Test', 'This', 'Out']
     puts stuff.join(' ')
 
@@ -29,6 +30,7 @@ what those are after you make some classes. How do you make classes?
 Very similar to how you made the ``ROOMS`` hash, but easier:
 
 .. code-block:: ruby
+
     class TheThing
       attr_reader :number
     

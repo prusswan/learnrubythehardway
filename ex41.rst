@@ -8,7 +8,7 @@ talking about:
 
 .. code-block:: ruby
 
-    cities[:find] = method(:find\_city)
+    cities[:find] = method(:find_city)
     puts cities[:find].call(cities, state)
 
 Remember that code can be stored in variables too. In order to store a

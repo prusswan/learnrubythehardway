@@ -204,6 +204,8 @@ latex_preamble = r"""
 \makeatother
 """
 
+epub_uid = "959BABED-0637-4A18-B622-7F802EA02046"
+
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
 
