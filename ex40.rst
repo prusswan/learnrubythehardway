@@ -14,11 +14,11 @@ they do when compared to arrays. You see, an array lets you do this:
     ruby-1.9.2-p180 :015 > things = ['a','b','c','d'] 
     => ["a", "b", "c", "d"] 
     ruby-1.9.2-p180 :016 > print things[1] 
-    => nil 
+    b=> nil 
     ruby-1.9.2-p180 :017 > things[1] = 'z' 
     => "z"
     ruby-1.9.2-p180 :018 > print things[1] 
-    z => nil 
+    z=> nil 
     ruby-1.9.2-p180 :019 > print things
     ["a", "z", "c", "d"] => nil 
     ruby-1.9.2-p180 :020 > 
