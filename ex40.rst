@@ -31,7 +31,7 @@ hash associates one thing to another, no matter what it is. Take a look:
 .. code-block:: ruby
  
     ruby-1.9.2-p180 :001 > stuff = {:name => "Rob", :age => 30,
-    :height => 5\*12+10} => {:name => "Rob", :age => 30, 
+    :height => 5*12+10} => {:name => "Rob", :age => 30, 
     :height => 70} 
     ruby-1.9.2-p180 :002 > puts stuff[:name]
     Rob => nil

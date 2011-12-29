@@ -325,7 +325,7 @@ All mock request methods have the same argument signature:
 
 .. code-block:: ruby
 
-    get '/path', params={}, rack\_env={} 
+    get '/path', params={}, rack_env={} 
 
 
 -  ``/path`` is the request path and may optionally include a query
