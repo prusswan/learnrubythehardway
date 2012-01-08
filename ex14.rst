@@ -25,19 +25,18 @@ for the ``ARGV`` arguments.
 
 .. code-block:: console
 
-    $ ruby ex14.rb Zed
-    Hi Zed, I'm the ex14.rb script.
+    $ ruby ex/ex14.rb Zed
+    Hi Zed, I'm the ex/ex14.rb script.
     I'd like to ask you a few questions.
     Do you like me Zed?
-    > yes
+    > Yes
     Where do you live Zed?
     > America
     What kind of computer do you have?
     > Tandy
-
-    Alright, so you said 'yes' about liking me.
-    You live in 'America'.  Not sure where that is.
-    And you have a 'Tandy' computer.  Nice.
+    Alright, so you said Yes about liking me.
+    You live in America.  Not sure where that is.
+    And you have a Tandy computer.  Nice.
 
 Extra Credit
 ------------
