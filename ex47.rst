@@ -39,9 +39,9 @@ project skeleton.
 
 First, make a ``ex47`` project from your project skeleton. Make sure you
 do it right and rename the library and get that first
-``test/test_ex47.rb`` test file going right.
+``ex47/test/test_ex47.rb`` test file going right.
 
-Next, create a simple file ``ex47/lib/game.rb`` where you can put the
+Next, create a simple file ``ex47/lib/ex47.rb`` where you can put the
 code to test. This will be a very silly little class that we want to
 test with this code in it:
 
