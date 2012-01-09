@@ -23,6 +23,13 @@ Let's use some of this to make a simple little text editor:
     :language: ruby
     :linenos:
 
+.. warning::
+
+    If you get errors in this script it is probably because you are using Ruby
+    1.8 and the book assumes Ruby 1.9.  To see what version you have type: ``ruby -v``
+    If you need to install a newer version then go back to the beginning of the
+    book where Exercise 0 tells you how.
+
 That's a large file, probably the largest you have typed in. So go slow,
 do your checks, and make it run. One trick is to get bits of it running
 at a time. Get lines 1-8 running, then 5 more, then a few more, etc.,

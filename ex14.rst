@@ -25,7 +25,7 @@ for the ``ARGV`` arguments.
 
 .. code-block:: console
 
-    $ ruby ex/ex14.rb Zed
+    $ ruby ex14.rb Zed
     Hi Zed, I'm the ex/ex14.rb script.
     I'd like to ask you a few questions.
     Do you like me Zed?
