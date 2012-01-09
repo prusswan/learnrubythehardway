@@ -59,7 +59,7 @@ I made a file called "ex15\_sample.txt" and ran my script.
 .. code-block:: console
 
     $ ruby ex15.rb ex15_sample.txt 
-    Here's your file 'ex15_sample.txt':
+    Here's your file ex15_sample.txt:
     This is stuff I typed into a file.
     It is really cool stuff.
     Lots and lots of fun to have in here.
