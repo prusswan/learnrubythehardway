@@ -101,7 +101,7 @@ Windows
 
 
 1.  Go to
-    `http://learnpythonthehardway.org/wiki/ExerciseZero <http://learnpythonthehardway.org/wiki/ExerciseZero>`_
+    `http://learnpythonthehardway.org/exercise0.html <http://learnpythonthehardway.org/exercise0.html>`_
     with your browser, get the ``gedit`` text editor, and install it.
     You do not need to be administrator to do this.
 2.  Make sure you can get to gedit easily by putting it on your desktop
