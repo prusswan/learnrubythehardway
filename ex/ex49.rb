@@ -15,7 +15,7 @@ end
 
 module Parser
 
-  def Parser.peek(word_list)
+  def self.peek(word_list)
     begin
       word_list.first.token
     rescue
@@ -23,7 +23,7 @@ module Parser
     end
   end
   
-  def Parser.match(word_list, expecting)
+  def self.match(word_list, expecting)
     begin
       word = word_list.shift
       if word.token == expecting
@@ -36,13 +36,13 @@ module Parser
     end
   end
   
-  def Parser.skip(word_list, token)
+  def self.skip(word_list, token)
     while peek(word_list) == token
       match(word_list, token)
     end
   end
   
-  def Parser.parse_verb(word_list)
+  def self.parse_verb(word_list)
     skip(word_list, :stop)
   
     if peek(word_list) == :verb
@@ -52,7 +52,7 @@ module Parser
     end
   end
   
-  def Parser.parse_object(word_list)
+  def self.parse_object(word_list)
     skip(word_list, :stop)
     next_word = peek(word_list)
   
@@ -66,14 +66,14 @@ module Parser
     end
   end
   
-  def Parser.parse_subject(word_list, subj)
+  def self.parse_subject(word_list, subj)
     verb = parse_verb(word_list)
     obj = parse_object(word_list)
   
     return Sentence.new(subj, verb, obj)
   end
   
-  def Parser.parse_sentence(word_list)
+  def self.parse_sentence(word_list)
     skip(word_list, :stop)
   
     start = peek(word_list)
