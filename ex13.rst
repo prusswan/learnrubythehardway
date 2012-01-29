@@ -78,6 +78,6 @@ Extra Credit
    used for the missing arguments?
 2. Write a script that has fewer arguments and one that has more. Make
    sure you give the unpacked variables good names.
-3. Combine ``gets.chomp()`` with ``ARGV`` to make a script that gets
+3. Combine ``STDIN.gets.chomp()`` with ``ARGV`` to make a script that gets
    more input from a user.
 
