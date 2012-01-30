@@ -117,8 +117,7 @@ Extra Credit
 
 1. Go find the Ruby documentation for hashes and try to do even more
    things to them.
-2. Find out what you can't do with hashes. A big one is that they do not
-   have order, so try playing with that.
+2. Find out what you can't do with hashes. 
 3. Try doing a ``for-loop`` over them, and then try the ``each`` method
    of iterating through a hash.
 
