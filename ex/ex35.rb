@@ -46,8 +46,8 @@ def bear_room()
   end
 end
 
-def cthulu_room()
-  puts "Here you see the great evil Cthulu."
+def cthulhu_room()
+  puts "Here you see the great evil Cthulhu."
   puts "He, it, whatever stares at you and you go insane."
   puts "Do you flee for your life or eat your head?"
 
@@ -58,7 +58,7 @@ def cthulu_room()
   elsif next_move.include? "head"
     dead("Well that was tasty!")
   else
-    cthulu_room()
+    cthulhu_room()
   end
 end
 
@@ -77,7 +77,7 @@ def start()
   if next_move == "left"
     bear_room()
   elsif next_move == "right"
-    cthulu_room()
+    cthulhu_room()
   else
     dead("You stumble around the room until you starve.")
   end
