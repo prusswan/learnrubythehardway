@@ -59,7 +59,8 @@ explain why.
 Here's more extra credit:
 -------------------------
 
-1. Explain why the 4.0 is used instead of just 4.
+1. I used 4.0 for ``space_in_a_car``, but is that necessary? What happens if it's
+   just 4?
 2. Remember that 4.0 is a "floating point" number. Find out what that
    means.
 3. Write comments above each of the variable assignments.
