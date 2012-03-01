@@ -39,7 +39,7 @@ similar to what you already know from making scripts:
    we would in a script. Now, the problem with ``puts_two`` is that it's
    not the easiest way to make a function. In Ruby we can skip the whole
    unpacking args and just use the names we want right inside ``()``.
-   That's what ``print_two_again`` does.
+   That's what ``puts_two_again`` does.
 
 After that you have an example of how you make a function that takes one
 argument in ``puts_one``.
