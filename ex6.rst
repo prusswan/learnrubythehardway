@@ -28,13 +28,17 @@ brace) characters. So, instead of using format strings:
 
 .. code-block:: ruby
 
-    name1 = "Joe" name2 = "Mary" puts "Hello %s, where is %s?" % [name1, name2] 
+    name1 = "Joe"
+    name2 = "Mary"
+    puts "Hello %s, where is %s?" % [name1, name2] 
 
 We can type:
 
 .. code-block:: ruby
 
-    name1 = "Joe" name2 = "Mary" puts "Hello #{name1}, where is #{name2}?" 
+    name1 = "Joe"
+    name2 = "Mary"
+    puts "Hello #{name1}, where is #{name2}?" 
 
 We will now type in a whole bunch of strings, variables, formats, and
 print them. You will also practice using short abbreviated variable
