@@ -25,20 +25,9 @@ Mac OSX
 
 To complete this exercise, complete the following tasks:
 
-1.  Go to
-    `http://learnpythonthehardway.org/exercise0.html <http://learnpythonthehardway.org/exercise0.html>`_
-    with your browser, get the ``gedit`` text editor, and install it.
-2.  Put gedit (your editor) in your Dock so you can reach it easily.
-
-    1. Run gedit so we can fix some stupid defaults it has.
-    2. Open ``Preferences`` from the ``gedit menu`` and select the
-       ``Editor`` tab.
-    3. Change ``Tab width``: to 2.
-    4. Select (make sure a check mark is in)
-       ``Insert spaces instead of tabs``.
-    5. Turn on "Automatic indentation" as well.
-    6. Open the ``View`` tab and turn on "Display line numbers".
-
+1.  Go to http://www.barebones.com/products/textwrangler/ with your browser, get
+    the ``TextWrangler`` text editor, and install it.
+2.  Put TextWrangler (your editor) in your Dock so you can reach it easily.
 3.  Find your "Terminal" program. Search for it. You will find it.
 4.  Put your Terminal in your Dock as well.
 5.  Run your Terminal program. It won't look like much.
@@ -63,13 +52,6 @@ To complete this exercise, complete the following tasks:
 13. Back in Terminal, see if you can list the directory to see your
     newly created file. Search online for how to list a directory.
 
-.. note::
-
-    If you have problems with gedit, which is possible with
-    non-English keyboard layouts, then I suggest you try Textwrangler
-    found at
-    `http://www.barebones.com/products/textwrangler/ <http://www.barebones.com/products/textwrangler/>`_
-    instead.
 
 OSX: What You Should See
 ------------------------
@@ -87,7 +69,7 @@ between what I did and what you should do.
     ~ $ mkdir mystuff
     ~ $ cd mystuff
     mystuff $ ls
-    # ... Use Gedit here to edit test.txt....
+    # ... Use TextWrangler here to edit test.txt....
     mystuff $ ls
     test.txt
     mystuff $
@@ -100,21 +82,10 @@ Windows
     Contributed by zhmark.
 
 
-1.  Go to
-    `http://learnpythonthehardway.org/exercise0.html <http://learnpythonthehardway.org/exercise0.html>`_
-    with your browser, get the ``gedit`` text editor, and install it.
-    You do not need to be administrator to do this.
-2.  Make sure you can get to gedit easily by putting it on your desktop
+1.  Go to http://notepad-plus-plus.org/ with your browser, get
+    the ``Notepad++`` text editor, and install it. You do not need to be administrator to do this.
+2.  Make sure you can get to Notepad++ easily by putting it on your desktop
     and/or in Quick Launch. Both options are available during setup.
-
-    1. Run gedit so we can fix some stupid defaults it has.
-    2. Open ``Edit->Preferences`` select the ``Editor`` tab.
-    3. Change ``Tab width``: to 2.
-    4. Select (make sure a check mark is in)
-       ``Insert spaces instead of tabs``.
-    5. Turn on "Automatic indentation" as well.
-    6. Open the View tab turn on "Display line numbers".
-
 3.  Find your "Terminal" program. It's called ``Command Prompt``.
     Alternatively just run ``cmd``.
 4.  Make a shortcut to it on your desktop and/or ``Quick Launch`` for
@@ -162,7 +133,7 @@ Windows: What You Should See
 
     C:\Documents and Settings\you>cd mystuff
 
-    ... Here you would use gedit to make test.txt in mystuff ...
+    ... Here you would use Notepad++ to make test.txt in mystuff ...
 
     C:\Documents and Settings\you\mystuff>
        <bunch of unimportant errors if you istalled it as non-admin - ignore them - hit Enter>
@@ -191,9 +162,7 @@ Linux is a varied operating system with a bunch of different ways to
 install software. I'm assuming if you are running Linux then you know
 how to install packages so here are your instructions:
 
-1.  Go to
-    `http://learnpythonthehardway.org/wiki/ExerciseZero <http://learnpythonthehardway.org/wiki/ExerciseZero>`_
-    with your browser, get the ``gedit`` text editor, and install it.
+1. Use your Linux package manager and install the ``gedit`` text editor.
 2.  Make sure you can get to gedit easily by putting it in your window
     manager's menu.
 
