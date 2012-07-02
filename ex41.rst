@@ -1,186 +1,131 @@
-Exercise 41: Gothons From Planet Percal #25
-===========================================
+Exercise 41: Learning To Speak Object Oriented
+==============================================
 
-Did you figure out the secret of the method in the hash from the last
-exercise? Can you explain it to yourself? I'll explain it and you can
-compare your explanation with mine. Here are the lines of code we are
-talking about:
+.. warning:: This is being rewritten based on the Python version, there may be errors.
 
-.. code-block:: ruby
+In this exercise I'm going to teach you how to speak "object oriented".  What
+I'll do is give you a small set of words with definitions you need to know.
+Then I'll give you a set of sentences with holes in them that you'll have to
+understand.  Finally, I'm going to give you a large set of exercises that you
+have to complete to make these sentences solid in your vocabulary.
 
-    cities[:find] = method(:find_city)
-    puts cities[:find].call(cities, state)
 
-Remember that code can be stored in variables too. In order to store a
-block of code in a variable, we create something called a ``proc``,
-which is short for procedure. In this code, first we are calling Ruby's
-built-in method called ``method``, which returns a proc version of the
-``find_city`` method, which we then store in the hash ``cities`` with
-the key ``:find``. This is the same as all the others where we set
-states to some cities, but in this case it's actually the proc.
+Word Drills
+-----------
 
-Alright, so once we know that ``find_city`` is in the hash at ``:find``,
-that means we can do work with it. The 2nd line of code (used later in
-the previous exercise) can be broken down like this:
+* class : Tell Ruby to make a new kind of thing.
+* object : Two meanings: the most basic kind of thing, and any instance of some thing.
+* instance : What you get when you tell Ruby to create a class.
+* def : How you define a function inside a class.
+* @ : Inside the functions in a class, @ is an operator for variables in the instance/object being accessed.
+* inheritance : The concept that one class can inherit traits from another class, much like you and your parents.
+* composition : The concept that a class can be composed of other classes as parts, much like how a car has wheels.
+* attribute : A property classes have that are from composition and are usually variables.
+* is-a : A phrase to say that something inherits from another, as in a Salmon is-a Fish.
+* has-a : A phrase to say that something is composed of other things or has a trait, as in a Salmon has-a mouth.
 
-1. Ruby reads ``cities`` and finds that variable, it's a ``hash``.
-2. Then there's ``[:find]`` which will index into the cities hash and
-   pull out whatever is at ``:find``.
-3. What is at ``[:find]`` is our proc ``find_city`` so Ruby then knows
-   it's got a proc, and when it hits ``.call`` it calls the proc code.
-4. The parameters ``cities``, ``state`` are passed to the proc
-   ``find_city``, and it runs because it's called.
-5. ``find_city`` then tries to look up ``states`` inside ``cities``, and
-   returns what it finds or a message saying it didn't find anything.
-6. Ruby takes what ``find_city`` returned, and prints it out using the
-   ``puts`` method we've been using all along.
+Alright, take some time to make flash cards for those and memorize them.  As
+usual this won't make too much sense until after you're done with this
+exercise, but you need to know the base words first.
 
-Here's a trick. Sometimes these things read better in English if you
-read the code backwards. This is how I would do it for that same line
-(remember backwards):
 
-1. ``state`` and ``city`` are...
-2. passed as parameters to...
-3. a proc at...
-4. ``:find`` inside...
-5. the hash ``cities``...
-6. and finally printed on the screen
+Phrase Drills
+-------------
 
-Here's another way to read it, this time "inside-out".
+Next I have a list of Ruby code snippets on the left, and the English
+sentences for them:
 
-1. Find the center item of the expression, in this case ``[:find]``.
-2. Go counter-clock-wise and you have a hash ``cities``, so this finds
-   the element ``:find`` in ``cities``.
-3. That gives us a proc. Keep going counter-clock-wise and you get to
-   the parameters.
-4. The parameters are passed to the proc, and that returns a result. Go
-   counter-clock-wise again.
-5. Finally, we are at the ``puts`` statement, and we have our end
-   result.
+1. class X(Y)            : "Make a class named X that is-a Y."
+2. class X(object) def initialize(J) : "class X has-a initialize that takes J parameters."
+3. class X(object) def M(J)        : "class X has-a function named M that takes J parameters."
+4. foo = X()             : "Set foo to an instance of class X."
+5. foo.M(J)              : "From foo get the M function, and call it with parameters J."
+6. foo.K = Q             : "From foo get the K attribute and set it to Q."
 
-After decades of programming I don't even think about these three ways
-to read code. I just glance at it and know what it means. I can even
-glance at a whole screen of code, and all the bugs and errors jump out
-at me. That took an incredibly long time and quite a bit more study than
-is sane. To get that way, I learned these three ways of reading most any
-programming language:
+In each of these where you see X, Y, M, J, K, Q, and foo you can treat those
+like blank spots.  For example I can also write these sentences as:
 
-1. Front to back.
-2. Back to front.
-3. Counter-clock-wise.
+1. "Make a class named ??? that is-a Y."
+2. "class ??? has-a initialize that takes ??? parameters."
+3. "class ??? has-a function named ??? that takes ??? parameters."
+4. "Set foo to an instance of class ???."
+5. "From foo get the ??? function, and call it with parameters ???."
+6. "From foo get the ??? attribute and set it to ???."
 
-Try them out when you have a difficult statement to figure out.
+Again, write these on some flash cards and drill them.  Put the Ruby code
+snippet on the front and the sentence on the back.  You *have* to be able to
+say the sentence exactly the same every time whenever you see that form.  Not
+sort of the same, but exactly the same.
 
-Now type in your next exercise, then go over it. This one is gonna be
-fun.
+
+Combined Drills
+---------------
+
+The final preparation for you is to combine the words drills with the phrase
+drills.  What I want you to do for this drill is this:
+
+1. Take a phrase card and drill it.
+2. Flip it over and read the sentence, and for each word in the sentence that is in your words drills, get that card.
+3. Drill those words for that sentence.
+4. Keep going until you are bored then take a break and do it again.
+
+
+A Reading Test
+--------------
+
+I now have a little Ruby hack that will drill you on these words you know in
+an infinite manner.  This is a simple script you should be able to figure out,
+and the only thing it does is use a library called `urllib` to download a list
+of words I have.  Here's the script, which you should enter into `oop_test.rb`
+to work with it:
+
 
 .. literalinclude:: ex/ex41.rb
     :language: ruby
     :linenos:
 
-What You Should See
--------------------
+Here's an example of me running this and trying to answer the questions as
+accurately as possible.  You can see that I type in the answer I think it is
+based on the phrases I've given you, and then the script prints out the correct
+answer.  You should get your answers as close as possible.
 
-.. code-block:: console
-
-    $ ruby ex41.rb
-
-    --------
-    The Gothons of Planet Percal #25 have invaded your ship and destroyed
-    your entire crew.  You are the last surviving member and your last
-    mission is to get the neutron destruct bomb from the Weapons Armory,
-    put it in the bridge, and blow the ship up after getting into an 
-    escape pod.
+.. literalinclude:: ex/ex41.txt
+    :linenos:
 
 
-    You're running down the central corridor to the Weapons Armory when
-    a Gothon jumps out, red scaly skin, dark grimy teeth, and evil clown costume
-    flowing around his hate filled body.  He's blocking the door to the
-    Armory and about to pull a weapon to blast you.
-    > dodge!
-    Like a world class boxer you dodge, weave, slip and slide right
-    as the Gothon's blaster cranks a laser past your head.
-    In the middle of your artful dodge your foot slips and you
-    bang your head on the metal wall and pass out.
-    You wake up shortly after only to die as the Gothon stomps on
-    your head and eats you.
+Practice English To Code
+------------------------
 
-    --------
-    Such a luser.
+Next you should run the script with the "english" option so that you drill the
+inverse operation.  Given an English phrase, write the code for it.  Here's me
+doing that too:
 
-    $ ruby ex41.rb 
-
-    --------
-    The Gothons of Planet Percal #25 have invaded your ship and destroyed
-    your entire crew.  You are the last surviving member and your last
-    mission is to get the neutron destruct bomb from the Weapons Armory,
-    put it in the bridge, and blow the ship up after getting into an 
-    escape pod.
+.. literalinclude:: ex/ex41a.txt
+    :linenos:
 
 
-    You're running down the central corridor to the Weapons Armory when
-    a Gothon jumps out, red scaly skin, dark grimy teeth, and evil clown costume
-    flowing around his hate filled body.  He's blocking the door to the
-    Armory and about to pull a weapon to blast you.
-    > tell a joke
-    Lucky for you they made you learn Gothon insults in the academy.
-    You tell the one Gothon joke you know:
-    Lbhe zbgure vf fb sng, jura fur fvgf nebhaq gur ubhfr, fur fvgf nebhaq gur ubhfr.
-    The Gothon stops, tries not to laugh, then busts out laughing and can't move.
-    While he's laughing you run up and shoot him square in the head
-    putting him down, then jump through the Weapon Armory door.
+Remember that these phrases are using nonsense words.  Part of learning to read
+code well is to stop placing so much meaning on the names used for variables
+and classes.  Too often people will read a word like "Cork" and suddenly get
+derailed because that word will confuse them about the meaning.  In the above
+example, "Cork" is just an arbitrary name chosen for a class.  Don't put any
+other meaning into it, and instead treat it like the patterns I've given you.
 
-    --------
-    You do a dive roll into the Weapon Armory, crouch and scan the room
-    for more Gothons that might be hiding.  It's dead quiet, too quiet.
-    You stand up and run to the far side of the room and find the
-    neutron bomb in its container.  There's a keypad lock on the box
-    and you need the code to get the bomb out.  If you get the code
-    wrong 10 times then the lock closes forever and you can't
-    get the bomb.  The code is 3 digits.
-    [keypad]> 123 
-    BZZZZEDDD!
-    [keypad]> 234
-    BZZZZEDDD!
-    [keypad]> 345
-    BZZZZEDDD!
-    [keypad]> 456
-    BZZZZEDDD!
-    [keypad]> 567
-    BZZZZEDDD!
-    [keypad]> 678
-    BZZZZEDDD!
-    [keypad]> 789
-    BZZZZEDDD!
-    [keypad]> 384
-    BZZZZEDDD!
-    [keypad]> 764
-    BZZZZEDDD!
-    [keypad]> 354
-    BZZZZEDDD!
-    [keypad]> 263
-    The lock buzzes one last time and then you hear a sickening
-    melting sound as the mechanism is fused together.
-    You decide to sit there, and finally the Gothons blow up the
-    ship from their ship and you die.
 
-    --------
-    You died.  You kinda suck at this.
+Reading More Code
+-----------------
 
-Extra Credit
-------------
+You are now to go on a new quest to read even more code and this time, to
+read the phrases you just learned in the code you read.  You will look for
+all the files with classes, and then do the following:
 
-1. Explain how returning the next room works.
-2. Add cheat codes to the game so you can get past the more difficult
-   rooms.
-3. Instead of having each function print itself, learn about "here
-   document" strings.
-4. Write the room description as here document strings, and change the
-   runner to use them.
-5. Once you have here document strings as the room description, do you
-   need to have the function prompt even? Have the runner prompt the
-   user, and pass that in to each function. Your functions should just
-   be ``if-statements`` printing the result and returning the next room.
-6. This is actually a small version of something called a "finite state
-   machine". Read about them. They might not make sense but try anyway.
+1. For each class give its name and what other classes it inherits from.
+2. Under that, list every function it has, and the parameters they take.
+3. List all of the attributes it uses on self.
+4. For each attribute, give the class it is.
+
+The goal is to go through real code and start learning to "pattern match"
+the phrases you just learned against how they're used.  If you drill this
+enough you should start to see these patterns shout at you in the code
+whereas before they just seemed like vague blank spots you didn't know.
 

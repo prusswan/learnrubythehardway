@@ -72,566 +72,93 @@ The Truth Tables
 We will now use these characters to make the truth tables you need to
 memorize.
 
-.. raw:: html
+========= =====
+   NOT    True?
+========= =====
+not False True
+--------- -----
+not True  False
+========= =====
+
+
+============== =====
+    OR         True?
+============== =====
+True or False  True
+-------------- -----
+True or True   True
+-------------- -----
+False or True  True
+-------------- -----
+False or False False
+============== =====
+
+
+=============== =====
+    AND         True?
+=============== =====
+True and False  False
+--------------- -----
+True and True   True
+--------------- -----
+False and True  False
+--------------- -----
+False and False False
+=============== =====
+
+
+
+==================== =====
+     NOT OR          True?
+==================== =====
+not (True or False)  False
+-------------------- -----
+not (True or True)   False
+-------------------- -----
+not (False or True)  False
+-------------------- -----
+not (False or False) True
+==================== =====
+
+
+===================== =====
+    NOT AND           True?
+===================== =====
+not (True and False)  True
+--------------------- -----
+not (True and True)   False
+--------------------- -----
+not (False and True)  True
+--------------------- -----
+not (False and False) True
+===================== =====
+
+
+=============== =====
+     !=         True?
+=============== =====
+1 != 0          True
+--------------- -----
+1 != 1          False
+--------------- -----
+0 != 1          True
+--------------- -----
+0 != 0          False
+=============== =====
+
+
+=============== =====
+     ==         True?
+=============== =====
+1 == 0          False
+--------------- -----
+1 == 1          True
+--------------- -----
+0 == 1          False
+--------------- -----
+0 == 0          True
+=============== =====
 
-   <table border="1" class="docutils">
-
-.. raw:: html
-
-   <thead valign="bottom">
-   <tr><th class="head">
-
-NOT
-
-.. raw:: html
-
-   </th>
-   <th class="head">
-
-True?
-
-.. raw:: html
-
-   </th>
-   </tr>
-   </thead>
-   <tbody valign="top">
-   <tr><td>
-
-not False
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-not True
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   </tbody>
-   </table>
-   <table border="1" class="docutils">
-
-.. raw:: html
-
-   <thead valign="bottom">
-   <tr><th class="head">
-
-OR
-
-.. raw:: html
-
-   </th>
-   <th class="head">
-
-True?
-
-.. raw:: html
-
-   </th>
-   </tr>
-   </thead>
-   <tbody valign="top">
-   <tr><td>
-
-True or False
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-True or True
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-False or True
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-False or False
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   </tbody>
-   </table>
-   <table border="1" class="docutils">
-
-.. raw:: html
-
-   <thead valign="bottom">
-   <tr><th class="head">
-
-AND
-
-.. raw:: html
-
-   </th>
-   <th class="head">
-
-True?
-
-.. raw:: html
-
-   </th>
-   </tr>
-   </thead>
-   <tbody valign="top">
-   <tr><td>
-
-True and False
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-True and True
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-False and True
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-False and False
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   </tbody>
-   </table>
-   <table border="1" class="docutils">
-
-.. raw:: html
-
-   <thead valign="bottom">
-   <tr><th class="head">
-
-NOT OR
-
-.. raw:: html
-
-   </th>
-   <th class="head">
-
-True?
-
-.. raw:: html
-
-   </th>
-   </tr>
-   </thead>
-   <tbody valign="top">
-   <tr><td>
-
-not (True or False)
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-not (True or True)
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-not (False or True)
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-not (False or False)
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   </tbody>
-   </table>
-   <table border="1" class="docutils">
-
-.. raw:: html
-
-   <thead valign="bottom">
-   <tr><th class="head">
-
-NOT AND
-
-.. raw:: html
-
-   </th>
-   <th class="head">
-
-True?
-
-.. raw:: html
-
-   </th>
-   </tr>
-   </thead>
-   <tbody valign="top">
-   <tr><td>
-
-not (True and False)
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-not (True and True)
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-not (False and True)
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-not (False and False)
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   </tbody>
-   </table>
-   <table border="1" class="docutils">
-
-.. raw:: html
-
-   <thead valign="bottom">
-   <tr><th class="head">
-
-!=
-
-.. raw:: html
-
-   </th>
-   <th class="head">
-
-True?
-
-.. raw:: html
-
-   </th>
-   </tr>
-   </thead>
-   <tbody valign="top">
-   <tr><td>
-
-1 != 0
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-1 != 1
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-0 != 1
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-0 != 0
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   </tbody>
-   </table>
-   <table border="1" class="docutils">
-
-.. raw:: html
-
-   <thead valign="bottom">
-   <tr><th class="head">
-
-==
-
-.. raw:: html
-
-   </th>
-   <th class="head">
-
-True?
-
-.. raw:: html
-
-   </th>
-   </tr>
-   </thead>
-   <tbody valign="top">
-   <tr><td>
-
-1 == 0
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-1 == 1
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-0 == 1
-
-.. raw:: html
-
-   </td>
-   <td>
-
-False
-
-.. raw:: html
-
-   </td>
-   </tr>
-   <tr><td>
-
-0 == 0
-
-.. raw:: html
-
-   </td>
-   <td>
-
-True
-
-.. raw:: html
-
-   </td>
-   </tr>
-   </tbody>
-   </table>
 
 Now use these tables to write up your own cards and spend the week
 memorizing them. Remember though, there is no failing in this book, just

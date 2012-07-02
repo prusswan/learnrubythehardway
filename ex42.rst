@@ -1,123 +1,104 @@
-Exercise 42: Gothons Are Getting Classy
-=======================================
+Exercise 42: Is-A, Has-A, Objects, and Classes
+**********************************************
 
-While it's fun to put functions inside of hashes, you'd think there'd be
-something in Ruby that does this for you. There is: the ``class``
-keyword. Using ``class`` is how you create an even more awesome "hash
-with functions" than the one you made in the last exercise. Classes have
-all sorts of powerful features and uses that I could never go into in
-this book. Instead, you'll just use them like they're fancy ``hashes``
-with functions.
+.. warning:: This is being rewritten based on the Python version, there may be errors.
 
-A programming language that uses classes is called "Object Oriented
-Programming". This is an old style of programming where you make
-"things" and you "tell" those things to do work. You've been doing a lot
-of this. A whole lot. You just didn't know it. Remember when you were
-doing this:
+An important concept that you have to understand is the difference between a
+``Class`` and an ``Object``.  The problem is, there is no real "difference" between a
+class and an object.  They are actually the same thing at different points in
+time.  I will demonstrate by a Zen koan:
 
-.. code-block:: ruby
+``What is the difference between a Fish and a Salmon?``
 
-    stuff = ['Test', 'This', 'Out']
-    puts stuff.join(' ')
+Did that question sort of confuse you? Really sit down and think about it for a
+minute.  I mean, a Fish and a Salmon are different but, wait, they are the same
+thing right?  A Salmon is a *kind* of Fish, so I mean it's not different.  But
+at the same time, becase a Salmon is a particular *type* of Fish and so it's actually
+different from all other Fish.  That's what makes it a Salmon and not a
+Halibut.  So a Salmon and a Fish are the same but different.  Weird.
 
-You were actually using classes. The variable stuff is actually an Array
-class. The ``stuff.join(' ')`` is calling the ``join`` function of the
-``Array`` and passing ``' '`` (just an empty space), which is also a
-class, a ``String`` class. It's all classes!
+This question is confusing because most people do not think about real things
+this way, but they intuitively understand them.  You do not need to think about
+the difference between a Fish and a Salmon because you *know* how they are
+related.  You know a Salmon is a *kind* of Fish and that there are other kinds of
+Fish without having to understand that.
 
-Well, and objects, but let's just skip that word for now. You'll learn
-what those are after you make some classes. How do you make classes?
-Very similar to how you made the ``ROOMS`` hash, but easier:
+Let's take it one step further, let's say you have a bucket full of 3 Salmon
+and because you are a nice person, you have decided to name them Frank, Joe, and
+Mary.  Now, think about this question:
 
-.. code-block:: ruby
+``What is the difference between Mary and a Salmon?``
 
-    class TheThing
-      attr_reader :number
-    
-      def initialize()
-        @number = 0
-      end
-    
-      def some_function()
-        puts "I got called."
-      end
-    
-      def add_me_up(more)
-        @number += more
-        return @number
-      end
-    end
-    
-    # two different things
-    a = TheThing.new
-    b = TheThing.new
-    
-    a.some_function()
-    b.some_function()
-    
-    puts a.add_me_up(20)
-    puts a.add_me_up(20)
-    puts b.add_me_up(30)
-    puts b.add_me_up(30)
-    
-    puts a.number
-    puts b.number
+Again this is a weird question, but it's a bit easier than the Fish vs.
+Salmon question.  You know that Mary is a Salmon, and so she's not really
+different.  She's just a specific "instance" of a Salmon.  Joe and Frank are also
+instances of Salmon. But, what do I mean when I say instance?  I mean they were
+created from some other Salmon and now represent a real thing that has Salmon-like
+attributes.
 
-See the ``@`` symbol before the ``@number`` variable? That makes it an
-instance variable. Every instance of ``TheThing`` that you create will
-have its own value for ``@number``. Instance variables are hidden away
-inside the object. We can't get at the name simply by typing
-``a.number`` *unless* we explicitly make that data readable to the
-outside world.
+Now for the mind bending idea:  Fish is a ``Class``, and Salmon is a ``Class``, and
+Mary is an ``Object``.  Think about that for a second.  Alright let's break it 
+down real slow and see if you get it.
 
-By including the ``attr_reader :number`` line. To make ``@number``
-write-only, we could do ``attr_writer :number``. And to make it read/write
-we could do ``attr_accessor :number``. Ruby uses the good object-oriented
-principle of encapsulating data.
+A Fish is a ``Class``, meaning it's not a *real* thing, but rather a word we attach
+to instances of things with similar attributes.  Got fins? Got gills? Lives in
+water?  Alright it's probably a Fish.
 
-Next, see the ``initialize`` method? That is how you set up a Ruby class
-with internal variables. You can set them with the ``@`` symbol just
-like I showed you here. See also how we then use this in ``add_me_up()``
-later which lets you add to the ``@number`` you created. Later you can
-see how we use this to add to our number and print it.
+Someone with a Ph.D. then comes along and says, "No my young friend, *this* Fish
+is actually *Salmo salar*, affectionately known as a Salmon."  This professor
+has just clarified the Fish further and made a new ``Class`` called "Salmon" that
+has more specific attributes.  Longer nose, reddish flesh, big, lives in the ocean or
+fresh water, tasty?  Ok, probably a Salmon.
 
-Classes are very powerful, so you should read everything you can about
-them and play with them. You actually know how to use them, you just
-have to try it. In fact, I want to play some guitar right now so I'm not
-going to give you an exercise to type. You're going to write an exercise
-using classes.
+Finally, a cook comes along and tells the Ph.D., "No, you see this Salmon right
+here, I'll call her Mary and I'm going to make a tasty fillet out of her with
+a nice sauce."  Now you have this *instance* of a Salmon (which also is an
+instance of a Fish) named Mary turned into something real that is filling your
+belly.  It has become an ``Object``.
 
-Here's how we'd do exercise 41 using classes instead of the thing we
-created:
+There you have it: Mary is a kind of Salmon that is a kind of Fish.  ``Object`` is
+a ``Class`` is a ``Class``.
+
+How This Looks In Code
+----------------------
+
+This is a weird concept, but to be very honest you only have to worry about it
+when you make new classes, and when you use a class.  I will show you two
+tricks to help you figure out whether something is a ``Class`` or
+``Object``.
+
+First, you need to learn two catch phrases "is-a" and "has-a".  You use the
+phrase is-a when you talk about objects and classes being related to each other
+by a class relationship.  You use has-a when you talk about objects and classes
+that are related only because they *reference* each other.
+
+Now, go through this piece of code and replace each ``##??`` comment with a
+replacement comment that says whether the next line represents an ``is-a`` or a
+``has-a`` relationship, and what that relationship is.  In the beginning of the
+code, I've laid out a few examples, so you just have to write the remaining
+ones.
+
+Remember, is-a is the relationship between Fish and Salmon, while has-a is the
+relationship between Salmon and Gills.
+
 
 .. literalinclude:: ex/ex42.rb
     :language: ruby
     :linenos:
 
-What You Should See
--------------------
-
-The output from this version of the game should be exactly the same as
-the previous version. In fact you'll notice that some of the code is
-nearly the same. Compare this new version of the game with the last one
-so you understand the changes that were made. Key things to really get
-are:
-
-1. How you made a ``class Game`` and put functions inside it.
-2. How ``initialize`` is a special initialization method that sets up
-   important variables.
-3. How you added functions to the class by nesting their definitions
-   under the ``class`` keyword.
-4. How you nested the contents of the functions under their names.
-5. The concept of ``@`` and how it's used in ``initialize``, ``play``,
-   and ``death``.
-6. How a Game was created at the end and then told to ``play()`` and how
-   that got everything started.
 
 Extra Credit
-------------
+============
 
-1. Add some rooms to make sure you know how to work with a class.
-2. Create a two-class version of this, where one is the ``Map`` and the
-   other is the ``Engine``. Hint: ``play`` goes in the ``Engine``.
+
+1. Is it possible to use a ``Class`` like it's an ``Object``?
+2. Fill out the animals, fish, and people in this exercise with functions that make
+   them do things.  See what happens when functions are in a "base class" like Animal
+   vs. in say Dog.
+3. Find other people's code and work out all the is-a and has-a relationships.
+4. Make some new relationships that are lists and dicts so you can also have "has-many"
+   relationships.
+5. Do you think there's a such thing as a "is-many" relationship?  Read about "multiple
+   inheritance", then avoid it if you can.
+
 

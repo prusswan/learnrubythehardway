@@ -1,99 +1,36 @@
-Exercise 45: Is-A, Has-A, Objects, and Classes
-==============================================
+Exercise 45: You Make A Game
+============================
 
-An important concept that you have to understand is the difference
-between a ``Class`` and an ``Object``. The problem is, there is no real
-"difference" between a class and an object. They are actually the same
-thing at different points in time. I will demonstrate by a Zen koan:
+You need to start learning to feed yourself. Hopefully as you have
+worked through this book, you have learned that all the information you
+need is on the internet, you just have to go search for it. The only
+thing you have been missing are the right words and what to look for
+when you search. Now you should have a sense of it, so it's about time
+you struggled through a big project and tried to get it working.
 
-``What is the difference between a Fish and a Salmon?``
+Here are your requirements:
 
-Did that question sort of confuse you? Really sit down and think about
-it for a minute. I mean, a Fish and a Salmon are different but, wait,
-they are the same thing right? A Salmon is a kind of Fish, so I mean
-it's not different. But at the same time, becase a Salmon is a
-particular type of Fish and so it's actually different from all other
-Fish. That's what makes it a Salmon and not a Halibut. So a Salmon and a
-Fish are the same but different. Weird.
+1. Make a different game from the one I made.
+2. Use more than one file, and use ``require`` to use them. Make sure
+   you know what that is.
+3. Use one class per room and give the classes names that fit their
+   purpose. Like ``GoldRoom``, ``KoiPondRoom``.
+4. Your runner will need to know about these rooms, so make a class that
+   runs them and knows about them. There's plenty of ways to do this,
+   but consider having each room return what room is next or setting a
+   variable of what room is next.
 
-This question is confusing because most people do not think about real
-things this way, but they intuitively understand them. You do not need
-to think about the difference between a Fish and a Salmon because you
-know how they are related. You know a Salmon is a kind of Fish and that
-there are other kinds of Fish without having to understand that.
+Other than that I leave it to you. Spend a whole week on this and make
+it the best game you can. Use classes, functions, dicts, lists anything
+you can to make it nice. The purpose of this lesson is to teach you how
+to structure classes that need other classes inside other files.
 
-Let's take it one step further, let's say you have a bucket full of 3
-Salmon and because you are a nice person, you have decided to name them
-Frank, Joe, and Mary. Now, think about this question:
+Remember, I'm not telling you exactly how to do this because you have to
+do this yourself. Go figure it out. Programming is problem solving, and
+that means trying things, experimenting, failing, scrapping your work,
+and trying again. When you get stuck, ask for help and show people your
+code. If they are mean to you, ignore them, focus on the people who are
+not mean and offer to help. Keep working it and cleaning it until it's
+good, then show it some more.
 
-``What is the difference between Mary and a Salmon?``
-
-Again this is a weird question, but it's a bit easier than the Fish vs.
-Salmon question. You know that Mary is a Salmon, and so she's not really
-different. She's just a specific "instance" of a Salmon. Joe and Frank
-are also instances of Salmon. But, what do I mean when I say instance? I
-mean they were created from some other Salmon and now represent a real
-thing that has Salmon-like attributes.
-
-Now for the mind bending idea: Fish is a ``Class``, and Salmon is a
-``Class``, and Mary is an ``Object``. Think about that for a second.
-Alright let's break it down real slow and see if you get it.
-
-A Fish is a ``Class``, meaning it's not a real thing, but rather a word
-we attach to instances of things with similar attributes. Got fins? Got
-gills? Lives in water? Alright it's probably a Fish.
-
-Someone with a Ph.D. then comes along and says, "No my young friend,
-this Fish is actually Salmo salar, affectionately known as a Salmon."
-This professor has just clarified the Fish further and made a new
-``Class`` called "Salmon" that has more specific attributes. Longer
-nose, reddish flesh, big, lives in the ocean or fresh water, tasty? Ok,
-probably a Salmon.
-
-Finally, a cook comes along and tells the Ph.D., "No, you see this
-Salmon right here, I'll call her Mary and I'm going to make a tasty
-fillet out of her with a nice sauce." Now you have this instance of a
-Salmon (which also is an instance of a Fish) named Mary turned into
-something real that is filling your belly. It has become an ``Object``.
-
-There you have it: Mary is a kind of Salmon that is a kind of Fish.
-``Object`` is a ``Class`` is a ``Class``.
-
-How This Looks In Code This is a weird concept, but to be very honest
-you only have to worry about it when you make new classes, and when you
-use a class. I will show you two tricks to help you figure out whether
-something is a ``Class`` or ``Object``.
-
-First, you need to learn two catch phrases "is-a" and "has-a". You use
-the phrase is-a when you talk about objects and classes being related to
-each other by a class relationship. You use has-a when you talk about
-objects and classes that are related only because they reference each
-other.
-
-Now, go through this piece of code and replace each ``##??`` comment
-with a replacement comment that says whether the next line represents an
-is-a or a has-a relationship, and what that relationship is. In the
-beginning of the code, I've laid out a few examples, so you just have to
-write the remaining ones.
-
-Remember, ``is-a`` is the relationship between Fish and Salmon, while
-``has-a`` is the relationship between Salmon and Gills.
-
-.. literalinclude:: ex/ex45.rb
-    :language: ruby
-    :linenos:
-
-Extra Credit
-------------
-
-1. Is it possible to use a ``Class`` like it's an ``Object``?
-2. Fill out the animals, fish, and people in this exercise with
-   functions that make them do things. See what happens when functions
-   are in a "base class" like Animal vs. in say Dog.
-3. Find other people's code and work out all the ``is-a`` and ``has-a``
-   relationships.
-4. Make some new relationships that are lists and dicts so you can also
-   have "has-many" relationships.
-5. Do you think there's a such thing as a "is-many" relationship? Read
-   about "multiple inheritance", then avoid it if you can.
-
+Good luck, and see you in a week with your game.

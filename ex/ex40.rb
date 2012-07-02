@@ -1,27 +1,24 @@
-cities = {'CA' => 'San Francisco', 
-  'MI' => 'Detroit',
-  'FL' => 'Jacksonville'}
+class Song
 
-cities['NY'] = 'New York'
-cities['OR'] = 'Portland'
+    def initialize(lyrics)
+        @lyrics = lyrics
+    end
 
-def find_city(map, state)
-  if map.include? state
-    return map[state]
-  else
-    return "Not found."
-  end
+    def sing_me_a_song()
+        for line in @lyrics
+            puts line
+        end
+    end
 end
 
-# ok pay attention!
-cities[:find] = method(:find_city)
+happy_bday = Song.new(["Happy birthday to you",
+                   "I don't want to get sued",
+                   "So I'll stop right there"])
 
-while true
-  print "State? (ENTER to quit) "
-  state = gets.chomp
+bulls_on_parade = Song.new(["They rally around the family",
+                        "With pockets full of shells"])
 
-  break if state.empty?
+happy_bday.sing_me_a_song()
 
-  # this line is the most important ever! study!
-  puts cities[:find].call(cities, state)
-end
+bulls_on_parade.sing_me_a_song()
+
